@@ -1,0 +1,29 @@
+{
+  "application_id": "J021",
+  "company": "EvalAI Technologies",
+  "to": "support@evalai.dev",
+  "submitted_date": "2026-10-18",
+  "user_authorization": "User explicitly approved these three destinations, prepared messages and CV attachments by replying 'send it'.",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "1a14dfed3cde2285",
+      "thread_id": "1a14dfed3cde2285",
+      "label_ids": [
+        "SENT"
+      ],
+      "snippet": null,
+      "history_id": null,
+      "internal_date": null,
+      "payload": null,
+      "size_estimate": null,
+      "classification_label_values": null
+    },
+    "isError": false
+  }
+}

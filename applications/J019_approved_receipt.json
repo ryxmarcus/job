@@ -1,0 +1,29 @@
+{
+  "application_id": "J019",
+  "company": "Magnisys",
+  "to": "careers@magnisys.com",
+  "submitted_date": "2026-10-18",
+  "user_authorization": "User explicitly approved these three destinations, prepared messages and CV attachments by replying 'send it'.",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "1a14dfe9de67ad48",
+      "thread_id": "1a14dfe9de67ad48",
+      "label_ids": [
+        "SENT"
+      ],
+      "snippet": null,
+      "history_id": null,
+      "internal_date": null,
+      "payload": null,
+      "size_estimate": null,
+      "classification_label_values": null
+    },
+    "isError": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Rahul Kumar",
+  "email": "RKTECH7621@GMAIL.COM",
+  "phone": "+91-7210476048",
+  "location_from_cv": "Delhi, India",
+  "location_priority": [
+    "Remote India",
+    "Gurgaon / Gurugram",
+    "Delhi",
+    "Visakhapatnam / Vizag"
+  ],
+  "target_ctc_inr_per_year": 3000000,
+  "fixed_vs_total_ctc": null,
+  "notice_period_days": 30,
+  "current_ctc": 2000000,
+  "linkedin_url": "https://www.linkedin.com/in/rahul-kumar-74a7b662/",
+  "github_url": null,
+  "fde_interpretation": "Forward Deployed Engineer (assumed; confirm)",
+  "current_official_title": "DevOps Engineer",
+  "last_updated": "2026-10-19",
+  "relocation_exception": {
+    "allowed": true,
+    "scope": "Google or similar companies",
+    "confirmed_locations": [
+      "Bengaluru",
+      "Hyderabad"
+    ],
+    "confirmed_on": "2026-10-17",
+    "note": "Original location priorities remain the default; willingness to relocate does not assert a job is remote."
+  },
+  "currently_serving_notice": false
+}

@@ -1,0 +1,28 @@
+RAHUL KUMAR
+Site Reliability / Cloud Platform Engineer
+Delhi, India | RKTECH7621@GMAIL.COM | +91-7210476048
+
+SUMMARY
+DevOps engineer with experience in infrastructure deployment, maintenance, troubleshooting, and systems automation using Python and Bash. Works with AWS IAM, Linux systems, Kubernetes, and CI/CD workflows supporting enterprise application operations.
+
+SKILLS
+AWS, EKS, Kubernetes, Docker, Terraform, Jenkins, Python, Bash, Linux, Prometheus, Grafana, CloudWatch, IAM, DNS
+
+SELECTED CLIENT PROJECT: ENTERPRISE LOGISTICS PLATFORM
+- Supported enterprise logistics applications across development, test, UAT, and production environments.
+- Implemented monitoring and alerting using Prometheus, Grafana, and CloudWatch.
+- Troubleshot production issues through application logs, infrastructure diagnostics, and coordination with development teams.
+- Managed backups, recovery procedures, and operational runbooks.
+
+EXPERIENCE
+Programming.com, Delhi | DevOps Engineer | March 2025 - Present
+Cloud platform and DevOps responsibilities supporting an enterprise logistics client.
+- Managed AWS infrastructure and Kubernetes deployments for enterprise applications.
+- Automated build and deployment workflows using Jenkins, Git, Docker, and infrastructure as code.
+- Supported Linux systems, application releases, troubleshooting, and operational documentation.
+
+Midea India, Delhi | DevOps Engineer | October 2020 - December 2022
+
+EDUCATION
+B.Tech, Information Technology | Delhi Technological University | 2016 - 2020
+MBA, Business Analytics | Delhi Technological University | 2023 - 2025

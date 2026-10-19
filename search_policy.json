@@ -1,0 +1,15 @@
+{
+  "preferred_companies": ["Google", "Microsoft", "Amazon", "Atlassian", "Adobe", "Salesforce", "ServiceNow", "SAP", "Cisco", "Oracle", "Red Hat", "MongoDB", "GitLab", "Grafana Labs", "Elastic", "Datadog", "Cloudflare", "Nutanix", "Rubrik", "Saxo Bank", "BT", "Hyland", "Zimperium"],
+  "company_aliases": {"thinkahead": "AHEAD", "lingarogroup": "Lingaro", "neweratech": "New Era Technology", "teikametrics": "Teikametrics", "mongodb": "MongoDB"},
+  "confirmed_relocation_companies": ["Google"],
+  "experience_years_approx": 4,
+  "recheck_after_days": 7,
+  "core_skill_terms": ["aws", "kubernetes", "terraform", "jenkins", "linux", "python", "bash", "docker", "ansible", "prometheus", "grafana"],
+  "notes": [
+    "Preferred companies are a sourcing list, not verified openings or a guarantee of employer quality.",
+    "Google relocation is confirmed. Similar-company exceptions need a documented assessment before applying outside default locations.",
+    "Four years is approximate; preserve exact employment dates and never assert four years with every individual tool.",
+    "Scores order human review; they are not ATS scores, eligibility decisions, or interview probabilities.",
+    "Unknown salary does not satisfy the 30 LPA target. Confirm the range during screening."
+  ]
+}

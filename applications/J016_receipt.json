@@ -1,0 +1,27 @@
+{
+  "application_id": "J016",
+  "company": "Vipra Software",
+  "to": "careers@viprasoftware.com",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "1a14ab02a271b8a3",
+      "thread_id": "1a14ab02a271b8a3",
+      "label_ids": [
+        "SENT"
+      ],
+      "snippet": null,
+      "history_id": null,
+      "internal_date": null,
+      "payload": null,
+      "size_estimate": null,
+      "classification_label_values": null
+    },
+    "isError": false
+  }
+}

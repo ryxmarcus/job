@@ -1,0 +1,92 @@
+RAHUL KUMAR
+MLOps Engineer
+ | RKTECH7621@GMAIL.COM | +91-7210476048 | LINKEDIN
+PROFESSIONAL SUMMARY
+Results-driven MLOps and Cloud Engineer with 4+ years of experience designing and managing production-grade ML
+pipelines, Kubernetes infrastructure, and CI/CD automation on AWS. Skilled in deploying scalable machine learning
+models, implementing end-to-end MLOps workflows, and building robust cloud platforms for enterprise applications.
+Proven track record of reducing deployment times, enhancing security posture, and enabling data science teams with
+automated model training and monitoring solutions.
+TECHNICAL SKILLS & EXPERTISE
+ML Frameworks: TensorFlow, PyTorch, Scikit-learn
+MLOps Tools: MLflow, Kubeflow, Domino Data Lab
+CI/CD: Jenkins, GitHub Actions, ArgoCD
+Model Serving: TensorFlow Serving
+Programming: Python, Bash, SQL
+Data Pipelines: Apache Airflow, Apache Kafka
+Experiment Tracking: MLflow, Weights & Biases (W&B)
+Containerization: Docker, Kubernetes, Helm
+Cloud Platforms: AWS SageMaker, Azure ML, Amazon EKS
+IaC: Terraform, AWS CloudFormation
+Monitoring: Prometheus, Grafana
+Feature Store: Feast, AWS Feature Store
+PROFESSIONAL EXPERIENCE
+Programming.com, Delhi - MLOps Engineer
+March 2025 - Present
+Midea India, Delhi — DevOps Engineer
+October 2020 – December 2022
+PROJECTS
+Project 1: Allcargo Digital Logistics Platform  |  Role: Senior Cloud & MLOps Engineer  |  Duration: 2 Years
+Technologies: AWS, Amazon EKS, Kubernetes, Docker, Helm, Terraform, Jenkins, GitHub Actions, ArgoCD, Istio, MLflow, Kubeflow,
+Airflow, TensorFlow Serving, Prometheus, Grafana, Kafka, Redis, RDS, Route53, CloudFront, IAM, WAF, CloudWatch, AWS Lambda
+MLOps Engineering (Data Science Team)
+• Designed end-to-end machine learning pipelines using Kubeflow on Kubernetes
+• Implemented experiment tracking and model versioning using MLflow
+• Built automated model deployment pipelines using GitHub Actions and ArgoCD
+• Deployed TensorFlow models using TensorFlow Serving with Kubernetes auto-scaling
+• Created feature engineering pipelines using Apache Airflow and Feast
+• Implemented automated model retraining based on data drift detection
+• Built monitoring dashboards for model health and inference performance using Prometheus and Grafana
+• Containerized ML workloads using Docker and Helm for scalable deployments
+Cloud Platform Engineering (iTopaz)
+• Designed and managed production-grade AWS infrastructure using Terraform and CloudFormation
+• Built and maintained Kubernetes (Amazon EKS) clusters for multiple business applications
+• Configured Istio Gateway, VirtualService, and Ingress for secure microservice communication
+• Managed Route53, ACM certificates, CloudFront, Load Balancers, and DNS routing
+• Automated infrastructure provisioning across Dev, SIT, UAT, and Production
+• Implemented monitoring and alerting using Prometheus, Grafana, and CloudWatch
+DevOps Engineering (iTariff Platform)
+• Developed complete CI/CD pipelines using Jenkins, GitHub Actions, and ArgoCD
+• Automated Docker image build, security scanning, ECR publishing, and Kubernetes deployment
+• Managed Kubernetes deployments, StatefulSets, ConfigMaps, Secrets, HPA, and rolling updates
+• Implemented Git branching strategies and deployment automation for multiple teams
+• Integrated AWS CodeArtifact, ECR, and CodeCommit with build pipelines
+• Optimized deployment processes, reducing application release time significantly
+Cloud Platform (Prefiler Application)
+• Managed deployment and lifecycle of Prefiler UI, API, and backend services on Amazon EKS
+MDM & Account Management
+• Managed IAM users, roles, policies, and cross-account access across AWS environments
+• Configured IRSA (IAM Roles for Service Accounts) for secure Kubernetes workload access
+• Managed AWS Organizations account permissions and environment-level access control
+• Automated onboarding of new cloud accounts and project environments
+• Configured SSO and least-privilege IAM policies following AWS security best practices
+AWS Cloud Security & Firewall
+• Implemented AWS WAF rules to protect public-facing applications
+• Configured Security Groups, Network ACLs, IAM policies, and resource-based permissions
+• Managed CloudFront security headers including CSP, HSTS, X-Frame-Options, and CORS
+• Performed vulnerability remediation using Trivy, Nessus, and AWS security recommendations
+• Implemented S3 bucket policies, encryption, lifecycle policies, and access controls
+• Configured Secrets Manager, KMS encryption, and secure credential management
+• Worked on compliance and security hardening for Kubernetes clusters and EC2 instances
+• Monitored security events using CloudWatch Logs and AWS CloudTrail
+Platform Administration
+• Administered Linux servers running Amazon Linux and Ubuntu
+• Managed Kafka topics, Redis clusters, RDS databases, and Kubernetes namespaces
+• Performed production troubleshooting, log analysis, thread dump analysis, and performance tuning
+• Automated operational tasks using Bash and Python scripting
+• Managed backup strategies, disaster recovery processes, and infrastructure documentation
+• Supported production releases and 24x7 critical incident management
+Key Achievements
+• Successfully managed cloud infrastructure supporting multiple enterprise logistics applications
+• Reduced deployment time from several hours to under 30 minutes through CI/CD automation
+• Automated Kubernetes deployments across Development, SIT, UAT, and Production environments
+• Improved infrastructure availability through monitoring, auto-scaling, and proactive alerting
+• Enhanced application security by implementing AWS security best practices and WAF policies
+• Enabled scalable MLOps workflows for Data Science teams with automated model deployment and monitoring
+Bachelor of Technology (Information Technology)
+Delhi Technological University, Delhi
+2016 - 2020
+EDUCATION
+MBA (Business Analytics)
+Delhi Technological University, Delhi
+2023 - 2025

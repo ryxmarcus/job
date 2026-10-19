@@ -1,0 +1,30 @@
+[
+  {
+    "provider": "greenhouse",
+    "board": "teikametrics"
+  },
+  {
+    "provider": "greenhouse",
+    "board": "neweratech"
+  },
+  {
+    "provider": "greenhouse",
+    "board": "mongodb"
+  },
+  {
+    "provider": "lever",
+    "board": "thinkahead"
+  },
+  {
+    "provider": "lever",
+    "board": "lingarogroup"
+  },
+  {
+    "provider": "lever",
+    "board": "brightedge"
+  },
+  {
+    "provider": "lever",
+    "board": "mactores"
+  }
+]
