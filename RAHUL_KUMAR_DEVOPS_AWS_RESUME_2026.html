@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Kumar - Senior DevOps & Cloud Infrastructure Engineer</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #0369a1;
+      --accent: #2563eb;
+      --text: #1e293b;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --bg-tag: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background-color: #f8fafc;
+      line-height: 1.45;
+      font-size: 13.5px;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px 48px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-radius: 8px;
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .contact-bar a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-bar a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    p.summary {
+      color: #334155;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    /* Certifications Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .cert-badge {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 7px 10px;
+      border-radius: 4px;
+    }
+
+    .cert-title {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--primary);
+    }
+
+    .cert-issuer {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    .skills-table td {
+      padding: 3px 0;
+      vertical-align: top;
+    }
+
+    .skill-cat {
+      width: 180px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .skill-list {
+      color: #334155;
+    }
+
+    /* Experience */
+    .job-block {
+      margin-bottom: 14px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--primary);
+    }
+
+    .company-name {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .job-date {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .job-desc {
+      font-style: italic;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list {
+      margin-left: 18px;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 4px;
+      line-height: 1.45;
+      color: #334155;
+    }
+
+    ul.bullet-list li strong {
+      color: var(--primary);
+    }
+
+    /* Education & Pubs */
+    .edu-item, .pub-item {
+      margin-bottom: 8px;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .edu-inst {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 11.5px;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: var(--primary);
+      }
+      section {
+        margin-bottom: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Rahul Kumar</h1>
+      <div class="subtitle">Senior AWS & DevOps Engineer | Site Reliability Engineer (SRE) | Cloud Platform</div>
+      <div class="contact-bar">
+        <span>📍 Delhi, India</span>
+        <span>📞 <a href="tel:+917210476048">+91-7210476048</a></span>
+        <span>✉️ <a href="mailto:rktech7621@gmail.com">rktech7621@gmail.com</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/rahul-kumar-74a7b662/" target="_blank">LinkedIn</a></span>
+        <span>💻 <a href="https://github.com/ryxmarcus" target="_blank">GitHub</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Results-driven <strong>Senior DevOps & Cloud Infrastructure Engineer</strong> with <strong>4+ years of hands-on experience</strong> architecting, automating, and scaling production-grade enterprise platforms on <strong>Amazon Web Services (AWS)</strong>. Deep expertise in container orchestration with <strong>Kubernetes (Amazon EKS)</strong>, Infrastructure as Code (<strong>Terraform</strong>, <strong>CloudFormation</strong>), automated CI/CD deployment pipelines (<strong>Jenkins</strong>, <strong>GitHub Actions</strong>, <strong>ArgoCD</strong>), and distributed microservices observability (<strong>Prometheus</strong>, <strong>Grafana</strong>, <strong>CloudWatch</strong>). Proven track record of slashing release cycles from hours to under 30 minutes, maintaining 99.95%+ service availability SLAs, and implementing least-privilege cloud security (IAM, IRSA, WAF).
+      </p>
+    </section>
+
+    <section>
+      <h2>Official AWS Certifications & Credentials</h2>
+      <div class="cert-grid">
+        <div class="cert-badge">
+          <div class="cert-title">AWS Certified DevOps Engineer – Professional (DOP-C02)</div>
+          <div class="cert-issuer">Amazon Web Services | Issued Oct 2026</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-title">AWS Certified Data Engineer – Associate (DEA-C01)</div>
+          <div class="cert-issuer">Amazon Web Services | Issued Oct 2026</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-title">AWS Knowledge: AI Driven Development Lifecycle Foundations</div>
+          <div class="cert-issuer">AWS Skill Builder / Credly | Official Score: 97%</div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-title">AWS Knowledge: Cloud Essentials</div>
+          <div class="cert-issuer">AWS Skill Builder / Credly | Official Score: 96%</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Core Competencies</h2>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat">Cloud Platforms (AWS):</td>
+          <td class="skill-list">Amazon EKS, EC2, S3, RDS (PostgreSQL/Aurora), VPC, IAM, Route 53, CloudFront, ALB/NLB, Lambda, CloudWatch, AWS WAF, KMS, Secrets Manager, CodeArtifact.</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Containers & Orchestration:</td>
+          <td class="skill-list">Docker, Kubernetes, Helm Charts, Istio Service Mesh, HPA, StatefulSets, ConfigMaps, Secrets, Ingress Controllers.</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Infrastructure as Code:</td>
+          <td class="skill-list">Terraform (Modules, Remote State, Workspaces), AWS CloudFormation, Ansible (Playbooks, Automation).</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">CI/CD & Release Automation:</td>
+          <td class="skill-list">Jenkins (Declarative Pipelines, Shared Libraries), GitHub Actions, ArgoCD (GitOps), Maven, SonarQube, Trivy.</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Observability & SRE:</td>
+          <td class="skill-list">Prometheus, Grafana, CloudWatch Logs/Alarms, Nagios, SLA/SLO definition, MTTR reduction, Incident Triage.</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Data & Middleware:</td>
+          <td class="skill-list">Apache Kafka (Topics, Consumer Groups), Redis Cache, Apache Airflow, Lake Formation, Glue fundamentals.</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Operating Systems & Code:</td>
+          <td class="skill-list">Linux (Ubuntu, Amazon Linux, RHEL), Shell/Bash Scripting, Python, Git / GitHub / Bitbucket.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">DevOps & Cloud Platform Engineer <span class="company-name">| Programming.com (Client: Allcargo Logistics)</span></span>
+          <span class="job-date">March 2025 – Present</span>
+        </div>
+        <div class="job-desc">Platforms: iTopaz Cloud Logistics, iTariff Global Platform, Prefiler Customs Gateway</div>
+        <ul class="bullet-list">
+          <li><strong>Kubernetes & EKS Infrastructure:</strong> Architected and maintained multi-tenant <strong>Amazon EKS</strong> production clusters hosting high-throughput microservices; configured Horizontal Pod Autoscaling (HPA), Cluster Autoscaler, and node group optimizations reducing compute waste by 22%.</li>
+          <li><strong>Infrastructure as Code:</strong> Developed modular, reusable <strong>Terraform</strong> configurations to provision VPC networking, multi-AZ subnets, security groups, RDS PostgreSQL/Aurora clusters, and EFS storage across Dev, SIT, UAT, and Production environments.</li>
+          <li><strong>GitOps & CI/CD Pipelines:</strong> Implemented automated end-to-end delivery pipelines leveraging <strong>Jenkins</strong>, <strong>GitHub Actions</strong>, and <strong>ArgoCD</strong>; automated container vulnerability scanning with Trivy, image tagging, Amazon ECR publishing, and zero-downtime rolling deployments.</li>
+          <li><strong>Service Mesh & Traffic Routing:</strong> Deployed <strong>Istio Service Mesh</strong>; configured Istio Ingress Gateway, VirtualServices, and mutual TLS (mTLS) for secure intra-service communication and traffic splitting.</li>
+          <li><strong>Cloud Security Hardening:</strong> Implemented least-privilege IAM policies, AWS Organizations boundary controls, and <strong>IAM Roles for Service Accounts (IRSA)</strong>; enforced automated SSL/TLS via AWS Certificate Manager (ACM) and configured <strong>AWS WAF</strong> rules mitigating OWASP Top 10 web vulnerabilities.</li>
+          <li><strong>Observability & SRE Operations:</strong> Built centralized monitoring dashboards using <strong>Prometheus</strong>, <strong>Grafana</strong>, and <strong>AWS CloudWatch Alarms</strong>; configured proactive Slack/SNS alerting reducing Mean Time to Resolution (MTTR) by 35%.</li>
+        </ul>
+      </div>
+
+      <div class="job-block">
+        <div class="job-header">
+          <span class="job-title">DevOps Engineer <span class="company-name">| Midea India</span></span>
+          <span class="job-date">October 2020 – December 2022</span>
+        </div>
+        <div class="job-desc">Platform: Enterprise Logistics & Commercial Operations Platform</div>
+        <ul class="bullet-list">
+          <li><strong>CI/CD Automation:</strong> Set up and administered central <strong>Jenkins</strong> masters and distributed build agents; authored Jenkins Declarative Pipelines integrating Git Webhooks for automated builds on push/merge events.</li>
+          <li><strong>Configuration Management:</strong> Authored <strong>Ansible</strong> playbooks to automate package installation, configuration management, and baseline security provisioning across 40+ Linux and Ubuntu EC2 instances.</li>
+          <li><strong>AWS Cloud Operations:</strong> Managed core AWS services including EC2, S3 bucket lifecycle policies, Application Load Balancers (ALB), and Route 53 public/private hosted zones.</li>
+          <li><strong>Container Setup:</strong> Containerized legacy Java and Python monolithic applications using <strong>Docker</strong>; created multi-stage Dockerfiles reducing production container image sizes by ~45%.</li>
+          <li><strong>Disaster Recovery & Backup:</strong> Automated EBS snapshot creation, RDS automated cross-region backup retention, and disaster recovery validation procedures ensuring compliance with business RPO/RTO objectives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="edu-header">
+          <span>Master of Business Administration (MBA) – Business Analytics</span>
+          <span>2023 – 2025</span>
+        </div>
+        <div class="edu-inst">Delhi Technological University (DTU), Delhi</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-header">
+          <span>Bachelor of Technology (B.Tech) – Information Technology</span>
+          <span>2016 – 2020</span>
+        </div>
+        <div class="edu-inst">Delhi Technological University (DTU), Delhi</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research & Publications</h2>
+      <div class="pub-item">
+        <div class="edu-header">
+          <span>Biometric System: Unimodal Versus Multibiometric Fusion and Its Current Applications</span>
+          <span>Jan 2021</span>
+        </div>
+        <div class="edu-inst">Published in Springer (Lecture Notes in Networks and Systems - LNNS / LNDECT) | Authors: Mahesh, Rahul Kumar, Kapil Sharma</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+

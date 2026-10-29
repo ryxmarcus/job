@@ -1,0 +1,29 @@
+RAHUL KUMAR
+AWS / DevOps Engineer
+Delhi, India | RKTECH7621@GMAIL.COM | +91-7210476048
+
+LinkedIn: https://www.linkedin.com/in/rahul-kumar-74a7b662/
+
+SUMMARY
+DevOps engineer with 4+ years of experience supporting AWS infrastructure, Kubernetes deployments, CI/CD, Linux systems, and production troubleshooting. Uses Terraform, CloudFormation, Jenkins, Python, and Bash to automate repeatable cloud operations and application delivery.
+
+SKILLS
+AWS, EKS, EC2, S3, RDS, IAM, VPC, Route 53, Terraform, CloudFormation, Jenkins, Ansible, Git, Docker, Kubernetes, Python, Bash
+
+SELECTED CLIENT PROJECT: ENTERPRISE LOGISTICS PLATFORM
+- Built CI/CD workflows for image builds, artifact publishing, and Kubernetes deployments.
+- Provisioned AWS resources using Terraform and CloudFormation.
+- Managed application routing, DNS, certificates, access controls, and cloud monitoring.
+- Supported Git workflows and resolved build and deployment failures with developers.
+
+EXPERIENCE
+Programming.com, Delhi | DevOps Engineer | March 2025 - Present
+Cloud platform and DevOps responsibilities supporting an enterprise logistics client.
+- Managed AWS infrastructure and Kubernetes deployments for enterprise applications.
+- Automated build and deployment workflows using Jenkins, Git, Docker, and infrastructure as code.
+- Supported Linux systems, application releases, troubleshooting, and operational documentation.
+
+Midea India, Delhi | DevOps Engineer | October 2020 - December 2022
+
+EDUCATION
+B.Tech, Information Technology | Delhi Technological University | 2016 - 2020

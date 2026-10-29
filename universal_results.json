@@ -1,0 +1,71 @@
+[
+  {
+    "id": "130226028841",
+    "title": "Devops Engineer",
+    "company": "Tata Consultancy Services",
+    "location": "Delhi / NCR, Noida, Ghaziabad",
+    "status": "QUESTIONNAIRE_UNRESOLVED"
+  },
+  {
+    "id": "290926041282",
+    "title": "MLOps + AWS devops",
+    "company": "Infosys",
+    "status": "ERROR: Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.naukri.com/job-listings-mlops-aws-devops-infosys-noida-hyderabad-bengaluru-2-to-5-years-290926041282\", waiting until \"load\"\n"
+  },
+  {
+    "id": "061026008581",
+    "title": "DevOps Engineer",
+    "company": "Techugo",
+    "location": "Noida",
+    "status": "APPLIED_SUCCESS"
+  },
+  {
+    "id": "211026016314",
+    "title": "DevOps Engineer ( Harness IDP)",
+    "company": "Rangam Infotech",
+    "location": "Gurugram",
+    "status": "APPLIED_SUCCESS"
+  },
+  {
+    "id": "220725503806",
+    "title": "DevOps Engineer",
+    "company": "The Card Company",
+    "location": "Gurugram",
+    "status": "EXTERNAL_COMPANY_SITE"
+  },
+  {
+    "id": "090726503191",
+    "title": "DevOps Engineer",
+    "company": "Digi Opera",
+    "location": "Gurugram",
+    "status": "EXTERNAL_COMPANY_SITE"
+  },
+  {
+    "id": "010725503310",
+    "title": "DevOps Engineer",
+    "company": "Pando India Software Consultants",
+    "location": "Noida",
+    "status": "EXTERNAL_COMPANY_SITE"
+  },
+  {
+    "id": "141024501811",
+    "title": "Devops Engineer",
+    "company": "Proounce",
+    "location": "New Delhi / Remote",
+    "status": "EXTERNAL_COMPANY_SITE"
+  },
+  {
+    "id": "101025502494",
+    "title": "DevOps Engineer",
+    "company": "ESK Technologies",
+    "location": "Ghaziabad / Hyderabad",
+    "status": "EXTERNAL_COMPANY_SITE"
+  },
+  {
+    "id": "221026506169",
+    "title": "DevOps Engineer",
+    "company": "Techcarrot Fz-llc",
+    "location": "Noida",
+    "status": "EXTERNAL_COMPANY_SITE"
+  }
+]

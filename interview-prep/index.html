@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confluent SRE Interview Mastery Portal</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom scrollbars and transitions */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+    ::-webkit-scrollbar-thumb { background: rgba(100, 116, 139, 0.4); border-radius: 3px; }
+    .tab-active { border-bottom: 3px solid #0284c7; color: #0284c7; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20">
+          C
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white tracking-tight flex items-center gap-2">
+            Confluent SRE & Systems Interview Portal
+            <span class="text-xs bg-sky-900/60 text-sky-300 border border-sky-700/50 px-2 py-0.5 rounded-full font-mono font-medium">L4/L5 Target</span>
+          </h1>
+          <p class="text-xs text-slate-400">Candidate: Rahul Kumar | Track: Cloud SRE, Distributed Systems & Kafka</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-right hidden sm:block">
+          <div class="text-xs text-slate-400">Mastery Progress</div>
+          <div id="progress-text" class="text-xs font-semibold text-sky-400">0 / 15 Topics Mastered</div>
+        </div>
+        <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden">
+          <div id="progress-bar" class="bg-gradient-to-r from-sky-500 to-emerald-400 h-full w-0 transition-all duration-300"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="max-w-7xl mx-auto px-4 flex space-x-6 border-t border-slate-800/80 text-sm overflow-x-auto">
+      <button onclick="switchTab('overview')" id="tab-overview" class="py-2.5 tab-active transition-colors">Roadmap & Rounds</button>
+      <button onclick="switchTab('kafka')" id="tab-kafka" class="py-2.5 text-slate-400 hover:text-slate-200 transition-colors">Kafka Architecture & KRaft</button>
+      <button onclick="switchTab('linux')" id="tab-linux" class="py-2.5 text-slate-400 hover:text-slate-200 transition-colors">Linux & Systems Debugging</button>
+      <button onclick="switchTab('k8s')" id="tab-k8s" class="py-2.5 text-slate-400 hover:text-slate-200 transition-colors">Kubernetes StatefulSets</button>
+      <button onclick="switchTab('incidents')" id="tab-incidents" class="py-2.5 text-slate-400 hover:text-slate-200 transition-colors">Incident Simulator</button>
+      <button onclick="switchTab('quiz')" id="tab-quiz" class="py-2.5 text-slate-400 hover:text-slate-200 transition-colors">Flashcard Practice</button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 space-y-6">
+
+    <!-- TAB 1: OVERVIEW & ROUNDS -->
+    <section id="panel-overview" class="space-y-6">
+      <div class="bg-gradient-to-r from-slate-800/80 to-slate-800/40 border border-slate-700/60 rounded-xl p-5 shadow-sm">
+        <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+          <span>🎯</span> Interview Architecture at Confluent
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+          Confluent builds and operates Confluent Cloud, a multi-tenant, planet-scale data streaming platform. The SRE loop heavily assesses <strong class="text-sky-300">Linux systems depth</strong>, <strong class="text-sky-300">distributed consensus</strong>, <strong class="text-sky-300">networking bottlenecks</strong>, and <strong class="text-sky-300">methodical incident troubleshooting</strong>.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+          <div class="bg-slate-900/80 border border-slate-700/50 rounded-lg p-3">
+            <div class="text-xs font-mono text-sky-400 uppercase">Stage 1</div>
+            <div class="font-semibold text-sm text-white mt-1">Screening</div>
+            <div class="text-xs text-slate-400 mt-1">Recruiter & Manager (30m) • Experience, Notice (30d), Stack match.</div>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-700/50 rounded-lg p-3">
+            <div class="text-xs font-mono text-sky-400 uppercase">Stage 2</div>
+            <div class="font-semibold text-sm text-white mt-1">Technical Phone</div>
+            <div class="text-xs text-slate-400 mt-1">Linux triage, Python/Bash scripting, cloud fundamentals (60m).</div>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-700/50 rounded-lg p-3">
+            <div class="text-xs font-mono text-sky-400 uppercase">Stage 3A</div>
+            <div class="font-semibold text-sm text-white mt-1">Systems Internals</div>
+            <div class="text-xs text-slate-400 mt-1">OS kernel, PageCache, zero-copy, I/O scheduling, TCP socket tuning.</div>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-700/50 rounded-lg p-3">
+            <div class="text-xs font-mono text-sky-400 uppercase">Stage 3B</div>
+            <div class="font-semibold text-sm text-white mt-1">Distributed Systems</div>
+            <div class="text-xs text-slate-400 mt-1">Kafka KRaft, High Watermark, ISR, rebalance protocols, multi-AZ.</div>
+          </div>
+          <div class="bg-slate-900/80 border border-slate-700/50 rounded-lg p-3">
+            <div class="text-xs font-mono text-sky-400 uppercase">Stage 3C</div>
+            <div class="font-semibold text-sm text-white mt-1">Incident Triage</div>
+            <div class="text-xs text-slate-400 mt-1">Real-time troubleshooting scenario, RCA, blameless postmortem.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Checklist -->
+      <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-3">Topic Mastery Checklist</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="checklist-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: KAFKA ARCHITECTURE & KRAFT -->
+    <section id="panel-kafka" class="hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Zero Copy Architecture Card -->
+        <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-white text-base flex items-center gap-2">
+              <span class="text-sky-400">⚡</span> Zero-Copy Architecture (`sendfile`)
+            </h3>
+            <span class="text-xs px-2 py-0.5 bg-emerald-900/50 text-emerald-300 border border-emerald-700 rounded">Top Question</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            In standard web applications, sending a file to the network requires 4 context switches and 4 copy operations (Disk -> Kernel Page Cache -> User Space Application Buffer -> Kernel Socket Buffer -> NIC DMA Buffer).
+          </p>
+
+          <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs border border-slate-800 space-y-2">
+            <div class="text-amber-400">// Traditional Path (4 Copies, 4 Context Switches):</div>
+            <div class="text-slate-400">read(fileDesc, buf, len)  -> Disk to PageCache, PageCache to User Buffer</div>
+            <div class="text-slate-400">write(sockDesc, buf, len) -> User Buffer to Socket Buffer, Socket to NIC</div>
+            <div class="border-t border-slate-800 my-2 pt-2 text-sky-400">// Kafka Zero-Copy Path (`sendfile` system call):</div>
+            <div class="text-emerald-300">sendfile(sockDesc, fileDesc, &offset, count);</div>
+            <div class="text-slate-300 mt-1">Data moves straight: Disk -> PageCache -> NIC (via scatter-gather DMA descriptor). 0 copies into user memory!</div>
+          </div>
+
+          <div class="p-3 bg-sky-950/40 border border-sky-800/40 rounded-lg text-xs text-sky-200">
+            <strong>Key Interview takeaway:</strong> Kafka avoids JVM Garbage Collection pauses entirely for cached reads because data is held in the OS Page Cache, not JVM Heap!
+          </div>
+        </div>
+
+        <!-- High Watermark & ISR Card -->
+        <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-white text-base flex items-center gap-2">
+              <span class="text-indigo-400">🛡️</span> High Watermark (HW) vs LEO & ISR
+            </h3>
+            <span class="text-xs px-2 py-0.5 bg-indigo-900/50 text-indigo-300 border border-indigo-700 rounded">Consistency</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            How Kafka prevents message loss and dirty reads across distributed replicas.
+          </p>
+
+          <div class="space-y-3">
+            <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs">
+              <div class="font-semibold text-white">Log End Offset (LEO):</div>
+              <div class="text-slate-400 mt-0.5">The offset of the next record to be written. Each replica has its own LEO as it fetches writes from the partition leader.</div>
+            </div>
+            <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs">
+              <div class="font-semibold text-white">High Watermark (HW):</div>
+              <div class="text-slate-400 mt-0.5">The highest offset replicated across ALL in-sync replicas (ISR). <strong>Consumers can ONLY read up to the HW</strong>, guaranteeing uncommitted messages are never exposed.</div>
+            </div>
+            <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 text-xs">
+              <div class="font-semibold text-white">Durability Golden Rule:</div>
+              <div class="text-emerald-400 font-mono mt-0.5">acks = all (-1) + min.insync.replicas = 2 + replication.factor = 3</div>
+              <div class="text-slate-400 mt-1">Guarantees that at least 2 replicas confirm write before success is returned to producer.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KRaft vs ZooKeeper -->
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5 space-y-4">
+        <h3 class="font-bold text-white text-base flex items-center gap-2">
+          <span class="text-rose-400">👑</span> KRaft (Kafka Raft Metadata Mode)
+        </h3>
+        <p class="text-xs text-slate-300">
+          In modern Kafka (version 3.x+ and 4.0), Apache ZooKeeper is removed in favor of KRaft.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-800">
+            <div class="font-semibold text-rose-300 mb-2">Legacy ZooKeeper Limitations:</div>
+            <ul class="space-y-1.5 text-slate-400 list-disc list-inside">
+              <li>Separate cluster to manage, monitor, and scale.</li>
+              <li>Metadata changes required dual-hop synchronization (Broker -> ZooKeeper -> Controller).</li>
+              <li>Slow failover: If the active Controller failed, the new Controller had to load all cluster metadata from ZK (causing minutes of partition offline downtime).</li>
+              <li>Topic partition limit (~200,000 per cluster max).</li>
+            </ul>
+          </div>
+          <div class="bg-slate-900/80 p-4 rounded-lg border border-slate-800">
+            <div class="font-semibold text-emerald-300 mb-2">KRaft Advantages (Confluent Standard):</div>
+            <ul class="space-y-1.5 text-slate-400 list-disc list-inside">
+              <li>Quorum-based Raft consensus running inside Kafka itself.</li>
+              <li>Metadata stored in an internal topic (<code class="text-sky-300">@metadata</code>).</li>
+              <li>Standby controllers replicate metadata in real time; failover is instantaneous (milliseconds).</li>
+              <li>Supports millions of partitions on a single cluster.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: LINUX & SYSTEMS DEBUGGING -->
+    <section id="panel-linux" class="hidden space-y-6">
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5">
+        <h3 class="font-bold text-white text-base mb-3 flex items-center gap-2">
+          <span>🛠️</span> Linux SRE Command Arsenal & Troubleshooting Cheat Sheet
+        </h3>
+        <p class="text-xs text-slate-300 mb-4">
+          Confluent interviewers test practical command fluency. When an issue occurs on a broker, which tool do you use first?
+        </p>
+
+        <div class="space-y-4">
+          <!-- Command 1: iostat -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-sky-400 font-bold">$ iostat -xz 1</span>
+              <span class="text-slate-400">Disk I/O Latency & Saturation</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              <strong>Key Columns to Inspect:</strong>
+              <code class="text-amber-300">%util</code>: Percentage of time device had I/O requests. Near 100% means saturated disk.
+              <code class="text-amber-300">r_await / w_await</code>: Average time (in milliseconds) for read/write requests to be served. If <code class="text-amber-300">w_await > 15ms</code> on SSD/NVMe, storage is a bottleneck.
+            </p>
+          </div>
+
+          <!-- Command 2: vmstat -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-sky-400 font-bold">$ vmstat 1</span>
+              <span class="text-slate-400">CPU Run Queue & Memory Thrashing</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              <strong>Key Columns to Inspect:</strong>
+              <code class="text-amber-300">r</code>: Number of runnable processes waiting for CPU. If <code class="text-amber-300">r > number of CPU cores</code>, the system is CPU-bound.
+              <code class="text-amber-300">b</code>: Processes blocked waiting for I/O (Uninterruptible Sleep / D state).
+              <code class="text-amber-300">si / so</code>: Swap in / Swap out. If non-zero, memory thrashing is active.
+            </p>
+          </div>
+
+          <!-- Command 3: ss -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-sky-400 font-bold">$ ss -s & ss -tulpn</span>
+              <span class="text-slate-400">Socket Backlog & Network Connections</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              Checks for TCP socket exhaustion, high <code class="text-amber-300">TIME-WAIT</code> connections, and Recv-Q / Send-Q backlog. A growing Recv-Q on port 9092 means the broker is not reading incoming requests fast enough.
+            </p>
+          </div>
+
+          <!-- Command 4: strace -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-sky-400 font-bold">$ strace -c -p &lt;pid&gt;</span>
+              <span class="text-slate-400">System Call Profiling</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-2">
+              Measures percentage of CPU time spent inside kernel system calls (<code class="text-amber-300">futex</code>, <code class="text-amber-300">epoll_wait</code>, <code class="text-amber-300">writev</code>). Great for pinpointing lock contention or slow syscalls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: KUBERNETES & STATEFULSETS -->
+    <section id="panel-k8s" class="hidden space-y-6">
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5 space-y-4">
+        <h3 class="font-bold text-white text-base flex items-center gap-2">
+          <span>☸️</span> Running Kafka on Kubernetes (Confluent For Kubernetes)
+        </h3>
+        <p class="text-xs text-slate-300">
+          Why Kafka brokers use StatefulSets with custom Operators instead of simple Deployments.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-2">
+            <div class="font-semibold text-sky-400">1. Headless Service DNS</div>
+            <p class="text-slate-400">
+              Brokers must have deterministic network names (e.g. <code class="text-slate-200">kafka-0.kafka-headless.prod.svc.cluster.local</code>). Client producers cache metadata by broker hostname.
+            </p>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-2">
+            <div class="font-semibold text-emerald-400">2. Persistent Volume Claims</div>
+            <p class="text-slate-400">
+              Each replica has its own dedicated volume template (<code class="text-slate-200">data-kafka-0</code>). If Pod 0 is rescheduled to another node, it reattaches the same EBS/NVMe volume without data resync.
+            </p>
+          </div>
+          <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 space-y-2">
+            <div class="font-semibold text-amber-400">3. Multi-AZ Anti-Affinity</div>
+            <p class="text-slate-400">
+              <code class="text-slate-200">podAntiAffinity</code> and <code class="text-slate-200">topologySpreadConstraints</code> prevent broker replicas of the same cluster from landing on the same physical host or AWS availability zone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: INCIDENT SIMULATOR -->
+    <section id="panel-incidents" class="hidden space-y-6">
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5">
+        <h3 class="font-bold text-white text-base mb-2 flex items-center gap-2">
+          <span>🚨</span> Interactive SRE Incident Simulator
+        </h3>
+        <p class="text-xs text-slate-300 mb-4">
+          Select an incident scenario commonly asked in Confluent interviews and walk through the diagnostic decision tree:
+        </p>
+
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button onclick="loadScenario('urp')" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs text-white font-medium">Scenario 1: Under-Replicated Partitions Spike</button>
+          <button onclick="loadScenario('lag')" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs text-white font-medium">Scenario 2: Consumer Lag Monotonic Increase</button>
+          <button onclick="loadScenario('disk')" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs text-white font-medium">Scenario 3: Broker Disk 95% Full</button>
+        </div>
+
+        <div id="scenario-card" class="bg-slate-950 p-5 rounded-xl border border-slate-800 space-y-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: FLASHCARD PRACTICE -->
+    <section id="panel-quiz" class="hidden space-y-6">
+      <div class="bg-slate-800/60 border border-slate-700 rounded-xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-bold text-white text-base flex items-center gap-2">
+            <span>🧠</span> Flashcard Quick-Fire Practice
+          </h3>
+          <span id="card-counter" class="text-xs text-slate-400">Card 1 / 6</span>
+        </div>
+
+        <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 min-h-[220px] flex flex-col justify-between">
+          <div>
+            <div id="quiz-category" class="text-xs font-mono text-sky-400 uppercase tracking-wider mb-2">Category</div>
+            <div id="quiz-question" class="text-base font-semibold text-white mb-4">Loading question...</div>
+            <div id="quiz-answer" class="text-xs text-slate-300 leading-relaxed hidden border-t border-slate-800 pt-3">Answer text...</div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4">
+            <button onclick="toggleAnswer()" id="btn-toggle-answer" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-white rounded font-medium">
+              Reveal Answer
+            </button>
+            <div class="space-x-2">
+              <button onclick="prevCard()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 rounded font-medium">Previous</button>
+              <button onclick="nextCard()" class="px-3 py-1.5 bg-sky-600 hover:bg-sky-500 text-xs text-white rounded font-medium">Next Question</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Checklist topics
+    const TOPICS = [
+      { id: 't1', title: 'Zero-Copy & sendfile() Syscall' },
+      { id: 't2', title: 'Linux PageCache & Dirty Ratio' },
+      { id: 't3', title: 'Sequential vs Random Disk I/O' },
+      { id: 't4', title: 'Kafka High Watermark vs LEO' },
+      { id: 't5', title: 'In-Sync Replicas (ISR) & acks=all' },
+      { id: 't6', title: 'KRaft Quorum Metadata Mode' },
+      { id: 't7', title: 'Consumer Lag & Rebalance Protocols' },
+      { id: 't8', title: 'iostat & vmstat Output Analysis' },
+      { id: 't9', title: 'TCP Socket Tuning (TIME_WAIT, buffers)' },
+      { id: 't10', title: 'Kubernetes StatefulSets for Kafka' },
+      { id: 't11', title: 'Multi-AZ Anti-Affinity Topology' },
+      { id: 't12', title: 'SLIs/SLOs & Error Budgeting' },
+      { id: 't13', title: 'UnderReplicatedPartitions Triage' },
+      { id: 't14', title: 'Tiered Storage Architecture (S3)' },
+      { id: 't15', title: 'Python Log Parsing & Retry Scripting' },
+    ];
+
+    function initChecklist() {
+      const container = document.getElementById('checklist-container');
+      const saved = JSON.parse(localStorage.getItem('confluent_sre_topics') || '{}');
+      let doneCount = 0;
+
+      container.innerHTML = TOPICS.map(t => {
+        const isChecked = !!saved[t.id];
+        if (isChecked) doneCount++;
+        return `
+          <label class="flex items-center space-x-2.5 p-2.5 bg-slate-900/80 hover:bg-slate-900 border border-slate-800 rounded-lg cursor-pointer transition-colors text-xs">
+            <input type="checkbox" id="${t.id}" onchange="toggleTopic('${t.id}')" ${isChecked ? 'checked' : ''} class="w-4 h-4 rounded text-sky-600 bg-slate-800 border-slate-700 focus:ring-0 focus:ring-offset-0">
+            <span class="${isChecked ? 'line-through text-slate-500' : 'text-slate-200'}">${t.title}</span>
+          </label>
+        `;
+      }).join('');
+
+      updateProgress(doneCount);
+    }
+
+    function toggleTopic(id) {
+      const saved = JSON.parse(localStorage.getItem('confluent_sre_topics') || '{}');
+      const el = document.getElementById(id);
+      if (el.checked) {
+        saved[id] = true;
+      } else {
+        delete saved[id];
+      }
+      localStorage.setItem('confluent_sre_topics', JSON.stringify(saved));
+      initChecklist();
+    }
+
+    function updateProgress(doneCount) {
+      const total = TOPICS.length;
+      const pct = Math.round((doneCount / total) * 100);
+      document.getElementById('progress-text').innerText = `${doneCount} / ${total} Topics Mastered (${pct}%)`;
+      document.getElementById('progress-bar').style.width = `${pct}%`;
+    }
+
+    // Tabs
+    const tabs = ['overview', 'kafka', 'linux', 'k8s', 'incidents', 'quiz'];
+    function switchTab(name) {
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-${t}`);
+        const panel = document.getElementById(`panel-${t}`);
+        if (t === name) {
+          btn.className = 'py-2.5 tab-active transition-colors';
+          panel.classList.remove('hidden');
+        } else {
+          btn.className = 'py-2.5 text-slate-400 hover:text-slate-200 transition-colors';
+          panel.classList.add('hidden');
+        }
+      });
+    }
+
+    // Incident Scenarios
+    const SCENARIOS = {
+      urp: {
+        title: "Scenario 1: Under-Replicated Partitions (URP) Spike Across AZ-1",
+        description: "Prometheus alerts that `kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions` has jumped from 0 to 450. Broker 3 and 7 are reporting follower fetch latency degradation.",
+        steps: [
+          "1. Triage Scope: Are URPs concentrated on specific brokers or across the whole cluster? In this case, brokers in AWS us-east-1a.",
+          "2. Network Latency: Run `mtr` / `ping` / check AWS VPC flow logs to confirm inter-AZ packet loss or cross-AZ latency spike.",
+          "3. Broker Health: Connect to broker 3 and run `iostat -xz 1` to check disk `w_await` (confirming EBS IOPS throttling), and `vmstat 1` to check CPU `b` state.",
+          "4. GC Pauses: Check Kafka JVM GC logs (`-XX:+PrintGCDetails`) for stop-the-world pauses exceeding `replica.lag.time.max.ms` (causing followers to drop out of ISR).",
+          "5. Mitigation: Temporarily adjust `min.insync.replicas` or throttle client producer traffic if cluster is near partition offline state."
+        ]
+      },
+      lag: {
+        title: "Scenario 2: Monotonic Consumer Lag Runaway",
+        description: "A critical payment consumer group has lag increasing by 50,000 messages/minute. The business SLA is on the verge of breach.",
+        steps: [
+          "1. Lag Distribution: Check if lag is evenly distributed across all partitions or concentrated on 1-2 hot partitions (hot partition key skew).",
+          "2. Consumer Group State: Run `kafka-consumer-groups.sh --describe --group payment-processor` to inspect consumer host assignments.",
+          "3. Rebalance Storm: Check if consumers are repeatedly joining and leaving (Heartbeat timeouts due to heavy downstream processing exceeding `max.poll.interval.ms`).",
+          "4. Downstream Bottleneck: Verify database/API write latency downstream of the consumer.",
+          "5. Action: Scale out consumer pods up to the total number of partitions in the topic; if already equal, optimize batching and async processing."
+        ]
+      },
+      disk: {
+        title: "Scenario 3: Broker Disk Reaches 95% Capacity",
+        description: "Broker 5 disk partition `/var/lib/kafka/data` is at 95% disk usage. If disk hits 100%, Kafka broker process halts immediately to prevent log corruption.",
+        steps: [
+          "1. Immediate Relief: Lower `retention.ms` or `retention.bytes` on high-volume non-critical topics to allow cleaner threads to purge old segments.",
+          "2. Segment Compaction Check: Check if log cleaner is failing or stalled on compacted topics (`LogCleaner` thread dead).",
+          "3. Partition Reassignment: Use Cruise Control or `kafka-reassign-partitions.sh` to move large partition replicas from broker 5 to underutilized brokers.",
+          "4. Volume Expansion: Trigger online EBS volume resize (`aws ec2 modify-volume`) followed by `xfs_growfs` (no reboot required on Linux XFS)."
+        ]
+      }
+    };
+
+    function loadScenario(key) {
+      const sc = SCENARIOS[key];
+      const card = document.getElementById('scenario-card');
+      card.innerHTML = `
+        <div class="border-b border-slate-800 pb-3">
+          <div class="text-xs font-mono text-sky-400 uppercase">Interactive Walkthrough</div>
+          <h4 class="text-base font-bold text-white mt-1">${sc.title}</h4>
+          <p class="text-xs text-slate-400 mt-1">${sc.description}</p>
+        </div>
+        <div class="space-y-2.5">
+          <div class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Methodical Triage Flow:</div>
+          ${sc.steps.map(s => `
+            <div class="p-2.5 bg-slate-900 border border-slate-800/80 rounded text-xs text-slate-300">
+              ${s}
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Flashcard Data
+    const CARDS = [
+      {
+        cat: "Linux / OS",
+        q: "How does Kafka achieve high-throughput disk writes without causing immediate disk I/O bottlenecks?",
+        a: "Kafka writes messages sequentially to the Linux OS Page Cache using sequential append-only log segments. The Linux kernel's pdflush/dirty page flusher threads write these dirty pages to physical disk asynchronously. Sequential I/O on disk avoids costly random track seeks and approaches memory bandwidth speeds."
+      },
+      {
+        cat: "Kafka Architecture",
+        q: "What is the difference between a Kafka replica being 'in sync' (in the ISR) versus 'out of sync'?",
+        a: "A follower replica is in the ISR if it has fetched all messages up to the leader's LEO within the configured `replica.lag.time.max.ms` window. If a follower experiences network lag, GC pauses, or disk stalls and falls behind this threshold, the leader drops it from the ISR."
+      },
+      {
+        cat: "Networking",
+        q: "What causes a TCP 'TIME_WAIT' socket pile-up, and how do you resolve it on high-throughput Linux hosts?",
+        a: "TIME_WAIT occurs on the side of the connection that initiates the active close (typically client or reverse proxy) to ensure the final ACK arrives and prevent delayed segments from confusing future connections. On high-throughput systems, this can exhaust ephemeral ports. Resolution: Enable `net.ipv4.tcp_tw_reuse = 1`, use persistent HTTP/TCP keep-alive connection pooling, and expand `net.ipv4.ip_local_port_range`."
+      },
+      {
+        cat: "Distributed Systems",
+        q: "Explain why KRaft is faster than ZooKeeper during partition leader failovers.",
+        a: "Under ZooKeeper, the metadata was stored externally in ZK nodes. When the active controller crashed, the newly elected controller had to read all topic and partition metadata from ZooKeeper into memory before electing leaders (taking several minutes). Under KRaft, standby controller nodes replicate the `@metadata` topic in real time and maintain an in-memory replicated state machine via Raft, making failover instantaneous."
+      },
+      {
+        cat: "Kubernetes",
+        q: "Why are Kafka brokers deployed as Kubernetes StatefulSets rather than standard Deployments?",
+        a: "Deployments treat pods as interchangeable and stateless with ephemeral network identities and randomized hostnames. Kafka brokers require persistent network identities (e.g. broker-0, broker-1) for client bootstrap metadata routing, and stable 1:1 bindings to dedicated Persistent Volume Claims (PVCs) so data does not have to be replicated across network upon pod restart."
+      },
+      {
+        cat: "SRE Incident",
+        q: "What does it mean when `iostat -xz 1` reports 100% `%util` with low `r/s` and `w/s`?",
+        a: "It indicates that the storage device is completely saturated while doing a small number of operations — a hallmark sign of high random I/O seek times, queuing contention, failing hardware, or throttled cloud storage IOPS (e.g. AWS EBS gp2 burst credit exhaustion or gp3 IOPS limit)."
+      }
+    ];
+
+    let currentCardIdx = 0;
+    function renderCard() {
+      const c = CARDS[currentCardIdx];
+      document.getElementById('card-counter').innerText = `Card ${currentCardIdx + 1} / ${CARDS.length}`;
+      document.getElementById('quiz-category').innerText = c.cat;
+      document.getElementById('quiz-question').innerText = c.q;
+      document.getElementById('quiz-answer').innerText = c.a;
+      document.getElementById('quiz-answer').classList.add('hidden');
+      document.getElementById('btn-toggle-answer').innerText = 'Reveal Answer';
+    }
+
+    function toggleAnswer() {
+      const ans = document.getElementById('quiz-answer');
+      const btn = document.getElementById('btn-toggle-answer');
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        btn.innerText = 'Hide Answer';
+      } else {
+        ans.classList.add('hidden');
+        btn.innerText = 'Reveal Answer';
+      }
+    }
+
+    function nextCard() {
+      currentCardIdx = (currentCardIdx + 1) % CARDS.length;
+      renderCard();
+    }
+
+    function prevCard() {
+      currentCardIdx = (currentCardIdx - 1 + CARDS.length) % CARDS.length;
+      renderCard();
+    }
+
+    // Init
+    initChecklist();
+    loadScenario('urp');
+    renderCard();
+  </script>
+</body>
+</html>

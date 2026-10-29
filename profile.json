@@ -14,10 +14,10 @@
   "notice_period_days": 30,
   "current_ctc": 2000000,
   "linkedin_url": "https://www.linkedin.com/in/rahul-kumar-74a7b662/",
-  "github_url": null,
+  "github_url": "https://github.com/ryxmarcus",
   "fde_interpretation": "Forward Deployed Engineer (assumed; confirm)",
   "current_official_title": "DevOps Engineer",
-  "last_updated": "2026-10-19",
+  "last_updated": "2026-10-26",
   "relocation_exception": {
     "allowed": true,
     "scope": "Google or similar companies",
@@ -28,5 +28,5 @@
     "confirmed_on": "2026-10-17",
     "note": "Original location priorities remain the default; willingness to relocate does not assert a job is remote."
   },
-  "currently_serving_notice": false
+  "currently_serving_notice": true
 }
