@@ -12,6 +12,7 @@ Confirmed: DevOps Engineer at Programming.com; approximately four years of liste
 - [CV fact checks](FACT_CHECK.md): unresolved experience and education claims.
 - [Daily plan](DAILY_PLAN.md) and [project evidence](projects/EVIDENCE_AND_PROJECTS.md).
 - [Adapted workflow](FRAMEWORK_ADAPTATION.md): outcomes, archives, follow-ups and an offline dashboard.
+- [Framework reference](job-reference/README.md): upstream reference tooling, skills, and templates from `ai-job-search`.
 
 ## Refresh
 
