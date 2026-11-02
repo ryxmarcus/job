@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-02T10:27:13.123090+05:30",
+  "results": [
+    {
+      "id": "N032",
+      "company": "HR Hai",
+      "role": "Site Reliability Engineer",
+      "url": "https://www.naukri.com/job-listings-site-reliability-engineer-hr-hai-new-delhi-gurugram-4-to-9-years-231026029247",
+      "status": "submission_unconfirmed",
+      "excerpt": "Jobs\n1\nCompanies\nServices\n1\nSearch jobs here\n27\n2\nAWS Devops/ Architect- 6-9 years - Pan India\nCrescendo Global Leadership Hiring India\nFeatured staffing consultancy\n6 - 10 years\nNot Disclosed\nDelhi / NCR, Pune, Bengaluru\nSend me jobs like this\nPosted: 2 days ago\nOpenings: 1\nApplicants: 100+\nSave\nApply\nImprove your chances with a CV tailored to this job\nHighlight your most relevant skills and experience for this role.\nJob highlights\nExperienced in AWS DevOps with expertise in AWS Cloud services, Observability, and Python\nManage and monitor AWS infrastructure using services like EC2, EKS, Lambda, and implement CI/CD pipelines with Github\nJob match score\nEarly Applicant\nKeyskills\nLocation\nWork Experience\nJob description\n\n\n\nMandatory Skills:\u00a0AWS DevOps, Observability, AWS Cloud, AWS Services,"
+    },
+    {
+      "id": "N033",
+      "company": "Wissen Technology",
+      "role": "Site Reliability Engineer",
+      "url": "https://www.naukri.com/job-listings-site-reliability-engineer-wissen-technology-gurugram-4-to-10-years-011026019553",
+      "status": "submission_unconfirmed",
+      "excerpt": "Jobs\n1\nCompanies\nServices\n1\nSearch jobs here\n27\n2\nSite Reliability Engineer\nWissen Technology\n3.6747 Reviews\n4 - 10 years\nNot Disclosed\nGurugram\nSend me jobs like this\nPosted: 3+ weeks ago\nOpenings: 4\nApplicants: 100+\nSave\nApply\nJob highlights\nExtensive experience with Secrets Management, Vulnerability Patching, AWS CloudFormation, GitOps, and monitoring tools like Splunk and Grafana\nEnsure application stability and uptime, automate manual tasks, maintain compliance, perform L1/L2 on-call support, and manage cleanup/decommissioning activities\nJob match score\nEarly Applicant\nKeyskills\nLocation\nWork Experience\nJob description\n\nRole: Site Reliability Engineer (SRE)\n\nRole Overview and Expected Deliverables\n\nWe're looking for a Site Reliability Engineer to join MAM Fund Management Public and In"
+    }
+  ]
+}

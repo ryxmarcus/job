@@ -15,6 +15,7 @@ Results-driven **Senior DevOps & Cloud Infrastructure Engineer** with **4+ years
 - **AWS Certified Data Engineer – Associate (DEA-C01)** | *Amazon Web Services* (Oct 2026)
 - **AWS Knowledge: AI Driven Development Lifecycle Foundations** | *AWS Skill Builder / Credly* (Score: 97%)
 - **AWS Knowledge: Cloud Essentials** | *AWS Skill Builder / Credly* (Score: 96%)
+- **AWS Cloud Quest: Cloud Practitioner** | *Amazon Web Services* (Oct 2026)
 
 ---
 
