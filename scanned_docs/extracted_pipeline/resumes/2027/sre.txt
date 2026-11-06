@@ -1,0 +1,29 @@
+RAHUL KUMAR
+Senior Site Reliability Engineer (5+ Years)
+Delhi, India | RKTECH7621@GMAIL.COM | +91-7210476048
+
+SUMMARY
+Senior Site Reliability Engineer with 5+ years of production experience managing multi-region AWS and Kubernetes infrastructure. Specialises in automated incident recovery, SLI/SLO observability, error budget governance, and high-throughput microservices reliability.
+
+SKILLS
+AWS, EKS, Kubernetes, Terraform, ArgoCD, Prometheus, Grafana, Thanos, Python, Go, Bash, Linux Kernel, Chaos Mesh, Istio, Incident Response
+
+SELECTED CLIENT PROJECT: ENTERPRISE LOGISTICS & CLOUD PLATFORM
+- Led end-to-end design and operation of mission-critical cloud platform services.
+- Implemented automated infrastructure provisioning, GitOps delivery, and zero-downtime rollouts.
+- Enforced enterprise security, compliance, monitoring, and automated incident recovery.
+
+EXPERIENCE
+Programming.com, Delhi | Senior DevOps / Platform Engineer | March 2025 - Present (2.6+ years)
+Cloud platform and DevOps engineering lead supporting enterprise logistics and digital freight operations.
+- Architected and managed production AWS infrastructure and multi-tenant Amazon EKS clusters running 40+ microservices.
+- Engineered automated GitOps pipelines with ArgoCD, Jenkins, and GitHub Actions, cutting release cycles to under 15 minutes.
+- Implemented Istio service mesh, mTLS security, distributed tracing, and Prometheus/Grafana observability dashboards.
+- Mentored junior engineers on infrastructure-as-code (Terraform), container security, and incident response runbooks.
+
+Midea India, Delhi | DevOps Engineer | October 2020 - December 2022 (2+ years)
+- Managed AWS cloud operations, automated server deployments via Ansible, and streamlined CI/CD pipelines.
+
+EDUCATION
+B.Tech, Information Technology | Delhi Technological University | 2016 - 2020
+MBA, Business Analytics | Delhi Technological University | 2023 - 2025

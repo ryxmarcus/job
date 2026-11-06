@@ -1,0 +1,34 @@
+{
+  "schedule_id": "29804796-3f5c-4843-944f-3416f2f01acc",
+  "title": "Hourly GCC job tracking and alerts",
+  "cron_expression": "0 9-19 * * *",
+  "cadence": "Hourly during business hours (9:00 AM to 7:00 PM IST)",
+  "timezone": "Asia/Kolkata",
+  "status": "ACTIVE",
+  "target_roles": [
+    "Site Reliability Engineer (SRE)",
+    "DevOps Engineer",
+    "MLOps / AI Platform Engineer",
+    "Forward Deployed Engineer"
+  ],
+  "priority_gcc_employers": [
+    "American Express Technology",
+    "Walmart Global Tech India",
+    "Fidelity Investments India",
+    "NatWest Group",
+    "Optum Global Solutions (UnitedHealth Group)",
+    "Barclays Global Service Centre",
+    "Mastercard Technology Hub",
+    "Standard Chartered GBS",
+    "Target Tech India"
+  ],
+  "location_preferences": [
+    "Remote India",
+    "Gurgaon / Gurugram",
+    "Delhi NCR",
+    "Bengaluru (Approved for Relocation)"
+  ],
+  "notification_email": "RKTECH7621@GMAIL.COM",
+  "compensation_policy": "Omit all compensation and CTC targets across CVs and application text",
+  "last_updated": "2026-10-18T09:55:00+05:30"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Site Reliability Engineer",
+    "company": "Sirionlabs",
+    "exp": "3-5 Yrs",
+    "loc": "Hybrid - Gurugram",
+    "sal": "",
+    "desc": "Leading analysts such as Gartner, IDC, and Spend Matters have consistently recognized S...",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-sirionlabs-gurugram-3-to-5-years-100626020765",
+    "dispatch": {
+      "track": "SRE",
+      "score": 2,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "SUCCESS"
+  },
+  {
+    "title": "Site Reliability Engineer",
+    "company": "MNC",
+    "exp": "4-9 Yrs",
+    "loc": "New Delhi, Gurugram",
+    "sal": "20-25 Lacs PA",
+    "desc": "UK Shift 5-Day Working Week Fixed OffSeeking a skilled Site Reliability Engineer (SRE...",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-hr-hai-new-delhi-gurugram-4-to-9-years-231026029247",
+    "dispatch": {
+      "track": "SRE",
+      "score": 3,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "SUCCESS"
+  },
+  {
+    "title": "Site Reliability Engineer (SRE)",
+    "company": "Kubenine",
+    "exp": "2-5 Yrs",
+    "loc": "Bengaluru",
+    "sal": "",
+    "desc": "Experience configuring and maintaining Jenkins deployment pipelines. Experience with Ac...",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-sre-kubenine-bengaluru-2-to-5-years-141026505784",
+    "dispatch": {
+      "track": "SRE",
+      "score": 3,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "APPLIED_PENDING"
+  },
+  {
+    "title": "Site Reliability Engineer (SRE) Kubernetes Platform (IRAP)",
+    "company": "Cisco",
+    "exp": "3-4 Yrs",
+    "loc": "Pune",
+    "sal": "",
+    "desc": "Minimum Qualifications . 3-4 years in SRE, DevOps, or platform engineering roles. Prefe...",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-sre-kubernetes-platform-irap-cisco-pune-3-to-4-years-220626500020",
+    "dispatch": {
+      "track": "SRE",
+      "score": 3,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "APPLIED_PENDING"
+  },
+  {
+    "title": "Site Reliability Engineer (SRE) Kubernetes Platform (IRAP)",
+    "company": "Cisco",
+    "exp": "3-4 Yrs",
+    "loc": "Hyderabad",
+    "sal": "",
+    "desc": "Minimum Qualifications . 3-4 years in SRE, DevOps, or platform engineering roles. Prefe...",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-sre-kubernetes-platform-irap-cisco-hyderabad-3-to-4-years-220626500018",
+    "dispatch": {
+      "track": "SRE",
+      "score": 3,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "APPLIED_PENDING"
+  }
+]

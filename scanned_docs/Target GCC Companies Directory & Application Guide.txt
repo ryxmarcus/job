@@ -1,0 +1,102 @@
+﻿Target GCC Companies Directory & Application Guide
+________________
+Prepared for Rahul Kumar (Asia/Kolkata). This directory covers both high-priority tracks: Global Capability Centers (GCCs in India) centered in Gurgaon/NCR and Remote, as well as Gulf Cooperation Council (Middle East GCC) employers offering tax-free compensation and visa sponsorship.
+1. Top Global Capability Centers in India (Gurgaon / Delhi NCR & Remote)
+________________
+India is home to over 1,500 Global Capability Centers. For Rahul Kumar's background in AWS, Kubernetes, Terraform, and enterprise cloud operations, GCCs represent the highest-converting tier offering strong job stability and direct INR 30–42 LPA compensation bands.
+Company
+	Hub Location
+	Target Roles
+	Compensation Band
+	Official Careers Portal
+ 
+	American Express
+	Gurgaon (DLF Cyber City)
+	SRE II, DevOps Engineer
+	INR 28 – 35 LPA
+	Amex India Careers
+	Walmart Global Tech
+	Gurgaon / Bengaluru
+	DevOps / Systems Engineer III
+	INR 30 – 38 LPA
+	Walmart Tech Careers
+	Fidelity Investments
+	Gurgaon / Bengaluru
+	Cloud Platform & SRE Engineer
+	INR 28 – 34 LPA
+	Fidelity India Tech
+	NatWest Group
+	Gurugram (Sector 21)
+	DevOps Engineer, Platform Eng
+	INR 27 – 33 LPA
+	NatWest Gurugram Jobs
+	Optum (UnitedHealth)
+	Gurgaon / Noida
+	Senior DevOps Engineer
+	INR 28 – 36 LPA
+	Optum India Careers
+	Barclays Global Service
+	Noida / Pune
+	DevOps & Reliability Engineer
+	INR 30 – 38 LPA
+	Barclays India Careers
+	Mastercard Tech Hub
+	Gurugram
+	Site Reliability Engineer (SRE)
+	INR 30 – 40 LPA
+	Mastercard Gurugram
+	Standard Chartered GBS
+	Gurgaon / Bengaluru
+	Cloud Platform SRE
+	INR 28 – 34 LPA
+	Standard Chartered Careers
+	Lowe's India
+	Bengaluru / Remote India
+	Cloud Infrastructure / DevOps
+	INR 30 – 38 LPA
+	Lowe's India Careers
+	Target Tech India
+	Bengaluru / Remote India
+	DevOps / SRE Engineer
+	INR 28 – 36 LPA
+	Target Tech Careers
+	2. Gulf Cooperation Council (GCC Region) Tech Hubs (UAE / Dubai & Saudi Arabia)
+________________
+For candidates seeking international relocation or remote tax-free contracts across the Gulf Cooperation Council region (Dubai, Abu Dhabi, Riyadh):
+Company
+	Headquarters / Work Type
+	Target Roles
+	Compensation Band (Tax-Free)
+	Official Careers Portal
+ 
+	Careem (Uber MENA)
+	Dubai, UAE (Remote friendly)
+	Site Reliability Engineer, Cloud Platform
+	AED 25,000 – 35,000 / mo (~₹55–78 LPA)
+	Careem Careers
+	Noon
+	Dubai, UAE / Riyadh, KSA
+	DevOps Engineer, Cloud Architect
+	AED 22,000 – 32,000 / mo (~₹48–70 LPA)
+	Noon Careers
+	Emirates NBD
+	Dubai, UAE
+	DevOps Engineer, Cloud Infrastructure
+	AED 26,000 – 38,000 / mo (~₹57–84 LPA)
+	Emirates NBD Careers
+	Talabat (Delivery Hero)
+	Dubai, UAE (Hybrid/Remote)
+	Automation & Reliability Engineer
+	AED 24,000 – 34,000 / mo (~₹53–75 LPA)
+	Talabat Careers
+	First Abu Dhabi Bank (FAB)
+	Abu Dhabi / Dubai, UAE
+	Platform & DevOps Specialist
+	AED 28,000 – 40,000 / mo (~₹62–88 LPA)
+	FAB Careers
+	3. Tailored CV Positioning for GCC Selection Committees
+________________
+* Enterprise Scale & Throughput: Emphasize high-volume transaction reliability (e.g., enterprise digital logistics microservices, AWS EKS multi-cluster deployments, Kafka data ingestion).
+* Financial & Security Governance: Highlight IAM Roles for Service Accounts (IRSA), secret management (HashiCorp Vault / AWS Secrets Manager), and zero-trust VPC architecture.
+* SLI/SLO and Observability: Detail practical monitoring frameworks using Prometheus, Grafana dashboards, and automated alert routing to minimize MTTR.
+* Zero-Downtime Releases: Feature automated blue-green/canary deployment strategies using Jenkins and ArgoCD GitOps pipelines.

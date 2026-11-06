@@ -1,0 +1,27 @@
+{
+  "application_id": "J012",
+  "company": "Decipher Consultancy",
+  "to": "careers@decipherconsultancy.in",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "1a14aafcb82c655f",
+      "thread_id": "1a14aafcb82c655f",
+      "label_ids": [
+        "SENT"
+      ],
+      "snippet": null,
+      "history_id": null,
+      "internal_date": null,
+      "payload": null,
+      "size_estimate": null,
+      "classification_label_values": null
+    },
+    "isError": false
+  }
+}

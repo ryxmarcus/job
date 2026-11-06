@@ -1,0 +1,36 @@
+﻿RAHUL KUMAR
+Systems Development Engineer / Cloud Infrastructure
+Delhi, India (Approved for Relocation to Hyderabad) | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn | GitHub
+________________
+Professional Summary
+________________
+Systems Development Engineer with 4 years of verified production experience building infrastructure automation tooling, managing cloud platform services, and administering enterprise Linux systems. Proven track record developing Python and Bash automation for system lifecycle provisioning, managing IAM access governance and role-based policies, building repeatable CI/CD pipelines, and streamlining development lifecycle operations. Strong foundation in Linux administration, network diagnostics, and modular infrastructure as code.
+Technical Skills & Engineering Competencies
+________________
+* Systems & Linux Administration: Linux (Ubuntu, RHEL, CentOS), System Configuration, Package Management, Shell Scripting, Process Management, Storage & I/O
+* Systems Automation & Tooling: Python, Bash / Shell Scripting, Go fundamentals, REST APIs, Automation Scripts, CLI Tooling, Git Version Control
+* Cloud Architecture & Access Control: AWS (IAM, IRSA, EC2, EKS, RDS, S3, VPC), Least Privilege Access Governance, Secrets Management, Security Groups
+* Infrastructure as Code & CI/CD: Terraform, Ansible, Jenkins, GitHub Actions, Docker, Helm, Release Automation
+* Networking & Troubleshooting: TCP/IP, DNS, Routing, Load Balancers, Network Debugging (netstat, curl, tcpdump), System Diagnostics
+* Observability & Operations: Prometheus, Grafana, CloudWatch, Centralized Logging, Operational Runbooks, SOP Documentation
+Professional Experience
+________________
+Programming.com, Delhi | DevOps & Systems Development Engineer
+March 2025 – Present | Enterprise Logistics Client Engagement (Allcargo Gati)
+* Engineered internal systems automation scripts and operational tooling in Python and Bash, automating environment setup, configuration validation, and deployment verification.
+* Architected and enforced granular IAM security policies, cross-account access roles, and IRSA (IAM Roles for Service Accounts) for secure, token-based Kubernetes workload authentication.
+* Built automated CI/CD pipeline infrastructure in Jenkins, integrating GitHub webhooks, automated build testing, Docker image packaging, and deployment orchestration.
+* Developed reusable, modular infrastructure-as-code using Terraform and Ansible to ensure consistent, auditable multi-environment deployments across DEV, SIT, UAT, and Production.
+* Diagnosed complex system performance, network routing, and service dependency issues across Linux host instances and Kubernetes clusters.
+* Managed and maintained Kubernetes ConfigMaps, Secrets, Ingress controllers, and Horizontal Pod Autoscalers (HPA) to maintain high availability and resource efficiency.
+* Collaborated closely with software developers to optimize build artifacts, resolve deployment friction, and author standard operating procedures (SOPs).
+Midea India, Delhi | Systems & DevOps Engineer
+October 2020 – December 2022
+* Developed automation playbooks in Ansible for automated Linux server provisioning, package installation, and baseline security hardening.
+* Managed AWS IAM access credentials, security groups, and automated backup schedules for database and application instances.
+* Supported build and release workflows using Jenkins, troubleshooting environment configuration mismatches.
+* Provided operational support for Linux environments on Amazon EC2, resolving system-level alerts and performance bottlenecks.
+Education
+________________
+* Bachelor of Technology (B.Tech), Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* Master of Business Administration (MBA), Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

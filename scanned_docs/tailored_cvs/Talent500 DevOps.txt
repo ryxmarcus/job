@@ -1,0 +1,37 @@
+﻿RAHUL KUMAR
+AWS & DevOps Engineer (3–7 Years Experience Band)
+Delhi, India (Open to Bengaluru Relocation) | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn
+________________
+Professional Summary
+________________
+Results-oriented AWS & DevOps Engineer with 4 years of verified production experience architecting, automating, and maintaining resilient cloud infrastructure across the full Software Development Life Cycle (SDLC). Proven background establishing AWS design patterns, automating code deployments through Jenkins and GitHub, provisioning repeatable infrastructure with Terraform and Ansible, and managing containerized microservices on Docker and Kubernetes. Experienced collaborating in Agile ceremonies, liaising with platform stakeholders, and guiding team members on cloud reliability and deployment automation.
+Technical Skills & Core Competencies
+________________
+* Cloud Platforms: AWS (EC2, EKS, S3, RDS, IAM, VPC, Route 53, CloudWatch, CloudFormation, ELB)
+* Infrastructure as Code & Config: Terraform, Ansible, Helm, CloudFormation
+* CI/CD & Source Control: Jenkins, GitHub, Git, Docker, ArgoCD, SonarQube
+* Containerization & Orchestration: Docker, Kubernetes (Amazon EKS), Microservices Architecture
+* Operating Systems & Scripting: Linux (Ubuntu, RHEL, CentOS), Python, Bash / Shell Scripting
+* Observability & Monitoring: Prometheus, Grafana, CloudWatch, Splunk / Centralized Logging
+* Methodologies: Agile/Scrum, Full SDLC Automation, Release Engineering, Stakeholder Liaison
+Professional Experience
+________________
+Programming.com, Delhi | DevOps Engineer
+March 2025 – Present | Enterprise Logistics Client Engagement (Allcargo Gati)
+* Established and maintained AWS infrastructure design patterns utilizing Terraform for automated, repeatable provisioning of VPCs, subnets, security groups, IAM roles, RDS databases, and EKS clusters.
+* Engineered and automated end-to-end CI/CD delivery pipelines in Jenkins across the full SDLC, integrating GitHub source control, automated Docker container builds, and Kubernetes rollouts for 15+ microservices.
+* Managed containerized application workloads on Amazon EKS, configuring ConfigMaps, Secrets, Ingress controllers, and Horizontal Pod Autoscalers (HPA) to maintain 99.95% service availability.
+* Implemented comprehensive monitoring and alerting infrastructure utilizing Prometheus, Grafana, and CloudWatch to track application latency, error rates, and resource utilization.
+* Authored Python and Bash automation scripts for routine cloud operational maintenance, log aggregation, and automated backup verifications.
+* Actively participated in Agile planning sessions, sprint reviews, and architectural ceremonies; liaised with developers and business stakeholders to troubleshoot build failures and eliminate release friction.
+* Mentored and guided junior engineering team members in adopting infrastructure-as-code best practices and Linux diagnostic techniques.
+Midea India, Delhi | DevOps Engineer
+October 2020 – December 2022
+* Configured and administered Linux server environments on Amazon EC2, automating configuration tasks via Ansible playbooks.
+* Maintained Jenkins continuous integration pipelines, automated application packaging, and supported scheduled release rollouts.
+* Managed AWS security groups, IAM access policies, and Amazon S3 lifecycle management for archival and data retention.
+* Provided operational support and debugging for production application deployments and environment configuration.
+Education
+________________
+* Bachelor of Technology (B.Tech), Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* Master of Business Administration (MBA), Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

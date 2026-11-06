@@ -1,0 +1,33 @@
+﻿RAHUL KUMAR
+AI Software Engineer (DevOps) / Cloud Platform Engineer
+Delhi, India | Remote India | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn | GitHub
+________________
+Professional Summary
+________________
+DevOps and Systems Engineer with 4 years of verified production experience supporting AI/ML infrastructure, containerized microservices, and automated cloud operations. Proven track record deploying Kubernetes workloads (Amazon EKS), building end-to-end CI/CD pipelines in Jenkins and GitHub Actions, and authoring robust automation tooling in Python and Bash. Skilled in cloud security, least-privilege IAM policies, and infrastructure monitoring.
+Technical Skills & Core Competencies
+________________
+* AI & DevOps Infrastructure: Kubernetes (Amazon EKS), Docker, Microservices, Python Automation, Model Serving Containerization
+* Cloud Platforms: AWS (EC2, EKS, S3, RDS, IAM, VPC, Route 53, CloudWatch, CloudFormation)
+* Infrastructure as Code & CI/CD: Terraform, Ansible, Jenkins, GitHub Actions, Helm, Git
+* Operating Systems & Scripting: Linux (Ubuntu, RHEL), Python, Bash / Shell Scripting, REST APIs
+* Security & Access Control: AWS IAM, IRSA, Secrets Management, Least-Privilege Governance, Network Security
+* Observability: Prometheus, Grafana, CloudWatch, Centralized Logging, System Health Diagnostics
+Professional Experience
+________________
+Programming.com, Delhi | DevOps & Platform Engineer
+March 2025 – Present | Enterprise Logistics Platform Client
+* Operated multi-tenant Kubernetes (Amazon EKS) clusters running 40+ microservices, automating deployments, scaling, and rolling updates.
+* Developed Python and Bash automation tools for environment provisioning, operational data processing, and automated verification.
+* Engineered CI/CD build and delivery pipelines in Jenkins, integrating automated testing, vulnerability scanning, and container packaging.
+* Enforced cloud security standards using granular IAM roles and IRSA for secure container workload authentication.
+* Monitored service reliability and resource consumption with Prometheus and Grafana dashboards.
+Midea India, Delhi | DevOps Engineer
+October 2020 – December 2022
+* Configured and automated Linux server environments on Amazon EC2 utilizing Ansible playbooks.
+* Managed Jenkins CI pipelines and automated artifact publishing to secure storage repositories.
+* Administered AWS security groups, access policies, and automated system health monitoring.
+Education
+________________
+* B.Tech, Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* MBA, Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

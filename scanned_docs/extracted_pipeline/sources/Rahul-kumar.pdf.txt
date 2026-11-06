@@ -1,0 +1,69 @@
+RAHUL KUMAR
+AWS & DevOps Engineer
+Delhi, India
+TECHNICAL SKILLS & EXPERTISE
+Operating Systems: Windows, UNIX, Red Hat Linux
+SCM Tools: GIT and SVN
+CI Tools: Jenkins
+Web/App Servers: Apache-Tomcat, Nginx
+Scripting: Shell Scripting, Python
+Build Tools: Maven
+Config Management: Ansible
+Containerization: Docker, Kubernetes
+Cloud: AWS, Azure
+Orchestration: Terraform
+Monitoring: Nagios, Prometheus
+Code Analysis: SonarQube
+PROFESSIONAL EXPERIENCE
+DevOps Engineer | Programming.com, Delhi | March 2025 - Present
+DevOps Engineer | Midea India, Delhi | Oct 2020 - Dec 2022
+PROJECTS UNDERTAKEN
+Project 1: Allcargo Project
+Role: AWS & DevOps Engineer | Duration: 2 Years
+Responsibilities:
+• Setup/Managing Linux, Windows & Ubuntu servers on Amazon EC2
+• Setup/Managing Databases on Amazon RDS
+• Monitoring servers through Amazon CloudWatch, SNS
+• Creating/Managing DNS records on Route 53 and GoDaddy
+• Used Terraform for infrastructure as code
+• Used Ansible for configuration and automated deployments
+• Maintained system availability per multiple SLAs
+• Created and managed Kubernetes clusters end to end
+• Managed AWS services (ELB, Route53, S3, CloudWatch, IAM, VPC)
+• Handled L1/L2 issues, client calls, and deployments
+RAHUL KUMAR Page 2
+PROJECTS UNDERTAKEN (CONT.)
+Project 2: Fintech Project
+Role: DevOps Engineer
+Responsibilities:
+• Installed and configured Jenkins for continuous integration and creating CI pipelines
+• Worked on AWS, configuration of EC2 instances, Elastic IPs, Security groups to resolve firewall issues
+• Created S3 buckets and configured them with lifecycle policies to archive infrequently accessed data
+• Created Ansible Playbooks to provision Tomcat server, Jenkins, GIT
+• Worked in VI editors to create and modify YAML scripts
+• Automatically triggered Jenkins build when changes are pushed to GIT using Webhook method
+• Responsible for handling performance issues of applications deployed in AWS environment
+• Debugged build failures and worked with developers and QA team to resolve related issues
+• Worked in GitHub to manage source code repository
+• Experience in Kubernetes Cluster Setup and deploying applications in Kubernetes cluster
+Additional Responsibilities (Programming.com):
+• Worked on Pod Creation and managing Containers
+• Implemented continuous delivery pipeline involving Jenkins, Ansible for automation from commit to
+deployment
+• Assisted developers with establishing and applying appropriate branching using GIT source control
+• Implemented and supported CI process via Jenkins
+EDUCATION
+Bachelor of Technology (Information Technology)
+Delhi Technological University, Delhi | 2016 - 2020
+PERSONAL INFORMATION
+Father's Name: Pradip Kumar
+Gender: Male
+Nationality: Indian
+Religion: Hindu
+Date of Birth: 20/03/1998
+Marital Status: Unmarried
+Languages Known: English, Hindi
+Permanent Address: Flat no-1013, CRPF Camp, Dwarka Sector 16B, Delhi-110072
+DECLARATION
+I declare that the information and facts stated herein are true and correct to the best of my knowledge.
+Rahul Kumar

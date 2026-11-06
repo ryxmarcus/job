@@ -1,0 +1,29 @@
+RAHUL KUMAR
+Staff / Lead Site Reliability Engineer (6+ Years)
+Delhi, India | RKTECH7621@GMAIL.COM | +91-7210476048
+
+SUMMARY
+Staff SRE with 6+ years designing distributed systems resilience, automated self-healing controllers, multi-region disaster recovery, and cross-functional reliability engineering standards.
+
+SKILLS
+Distributed Systems, Multi-Region DR, Kafka, Kubernetes Operators, Python, Go, Chaos Engineering, Capacity Planning, SRE Governance
+
+SELECTED CLIENT PROJECT: ENTERPRISE LOGISTICS & CLOUD PLATFORM
+- Led end-to-end design and operation of mission-critical cloud platform services.
+- Implemented automated infrastructure provisioning, GitOps delivery, and zero-downtime rollouts.
+- Enforced enterprise security, compliance, monitoring, and automated incident recovery.
+
+EXPERIENCE
+Programming.com, Delhi | Lead DevOps / Staff Platform Engineer | March 2025 - Present (3.6+ years)
+Technical lead for cloud infrastructure, site reliability engineering, and MLOps platforms across enterprise logistics programs.
+- Spearheaded the design of an Internal Developer Platform (IDP) enabling self-service provisioning of compliant Kubernetes clusters.
+- Established enterprise SLO frameworks (99.95% availability), automated chaos testing, and blameless post-mortem culture.
+- Directed hybrid cloud disaster recovery and multi-region failover strategies with measured RTO < 10m and RPO < 1m.
+- Partnered with product and data science executives to scale production LLMOps and RAG inference pipelines reliably.
+
+Midea India, Delhi | DevOps Engineer | October 2020 - December 2022 (2+ years)
+- Managed AWS cloud infrastructure, automated configuration management, and maintained CI/CD build environments.
+
+EDUCATION
+B.Tech, Information Technology | Delhi Technological University | 2016 - 2020
+MBA, Business Analytics | Delhi Technological University | 2023 - 2025

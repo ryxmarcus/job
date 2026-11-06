@@ -1,0 +1,27 @@
+{
+  "application_id": "J014",
+  "company": "JA Global",
+  "to": "careers@jaglobal.in",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "id": "1a14aaffdc3c98a5",
+      "thread_id": "1a14aaffdc3c98a5",
+      "label_ids": [
+        "SENT"
+      ],
+      "snippet": null,
+      "history_id": null,
+      "internal_date": null,
+      "payload": null,
+      "size_estimate": null,
+      "classification_label_values": null
+    },
+    "isError": false
+  }
+}

@@ -1,0 +1,33 @@
+﻿RAHUL KUMAR
+DevOps Engineer / Cloud Infrastructure Automation
+Delhi, India | Remote India | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn | GitHub
+________________
+Professional Summary
+________________
+Cloud and DevOps Engineer with 4 years of verified production experience implementing infrastructure as code, automating CI/CD delivery pipelines, and maintaining reliable enterprise cloud platforms. Strong proficiency in AWS infrastructure automation using Terraform, container orchestration with Docker and Kubernetes, build automation in Jenkins, and Linux systems administration.
+Technical Skills & Core Competencies
+________________
+* Cloud Platforms: AWS (EC2, EKS, S3, RDS, IAM, VPC, Route 53, CloudWatch, CloudFormation)
+* Infrastructure as Code: Terraform, Ansible, CloudFormation, Helm
+* CI/CD & Source Control: Jenkins, GitHub, Git, Docker, ArgoCD, Pipeline Automation
+* Containerization: Docker, Kubernetes (Amazon EKS), Microservices Deployment
+* Operating Systems & Scripting: Linux (Ubuntu, RHEL, CentOS), Python, Bash / Shell Scripting
+* Monitoring & Operations: Prometheus, Grafana, CloudWatch, Systems Troubleshooting
+Professional Experience
+________________
+Programming.com, Delhi | DevOps Engineer
+March 2025 – Present | Enterprise Logistics Platform Client
+* Provisioned scalable AWS infrastructure components using Terraform and CloudFormation for multi-environment deployments.
+* Constructed automated CI/CD pipelines in Jenkins, integrating Git version control, Docker image compilation, and Kubernetes rollouts.
+* Administered Amazon EKS clusters, configuring Ingress, ConfigMaps, Secrets, and automated resource scaling.
+* Configured comprehensive monitoring and alerting infrastructure using Prometheus, Grafana, and CloudWatch.
+* Authored Python and Bash automation scripts for routine operational maintenance and automated deployment checks.
+Midea India, Delhi | DevOps Engineer
+October 2020 – December 2022
+* Automated Linux server provisioning and configuration using Ansible playbooks.
+* Maintained continuous integration pipelines in Jenkins, supporting scheduled release cycles.
+* Managed AWS security groups, IAM access credentials, and S3 lifecycle retention policies.
+Education
+________________
+* B.Tech, Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* MBA, Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

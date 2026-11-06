@@ -1,0 +1,32 @@
+﻿RAHUL KUMAR
+Site Reliability Engineer (Cloud & Platform Engineering)
+Delhi, India | Gurugram Location | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn | GitHub
+________________
+Professional Summary
+________________
+Site Reliability Engineer with 4 years of verified production experience architecting scalable cloud foundations, managing Kubernetes cluster availability, and driving full-stack observability. Experienced establishing SLIs/SLOs, reducing incident recovery times through Python/Bash automation, provisioning infrastructure via Terraform, and operating high-concurrency microservices architectures.
+Technical Skills & Reliability Competencies
+________________
+* Reliability & Observability: Prometheus, Grafana, CloudWatch, Alertmanager, Incident Remediation, SLI/SLO Frameworks, Synthetic Health Probes
+* Cloud & Container Platforms: AWS (EC2, EKS, RDS, S3, IAM, VPC), Docker, Kubernetes (Amazon EKS), Microservices Operations
+* Infrastructure Automation: Terraform, Ansible, CloudFormation, Helm
+* CI/CD & DevOps: Jenkins, GitHub Actions, Git, Zero-Downtime Rolling Deployments
+* Operating Systems & Scripting: Linux (RHEL, Ubuntu), Python, Bash / Shell Scripting, Network Troubleshooting
+Professional Experience
+________________
+Programming.com, Delhi | DevOps & Site Reliability Engineer
+March 2025 – Present | Enterprise Logistics Platform Client
+* Operated multi-tenant Amazon EKS clusters running 40+ microservices, maintaining 99.95% system uptime against strict SLA commitments.
+* Implemented centralized observability using Prometheus, Grafana, and CloudWatch, configuring alert rules to track error rates and p95 latency.
+* Developed automated remediation scripts in Python and Bash, programmatically mitigating recurring infrastructure bottlenecks to improve MTTR.
+* Automated zero-downtime rolling updates with liveness/readiness probes and automated rollback safeguards across DEV, SIT, UAT, and Production.
+* Provisioned resilient AWS cloud infrastructure using modular Terraform code, enforcing least-privilege IAM policies.
+Midea India, Delhi | DevOps Engineer
+October 2020 – December 2022
+* Administered Linux server environments on Amazon EC2, managing configuration drift remediation using Ansible playbooks.
+* Maintained Jenkins CI pipelines, automated deployment scripts, and managed AWS security group configurations.
+* Monitored system availability and supported production incident resolution.
+Education
+________________
+* B.Tech, Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* MBA, Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

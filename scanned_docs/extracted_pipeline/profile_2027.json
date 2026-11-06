@@ -1,0 +1,41 @@
+{
+  "name": "Rahul Kumar",
+  "email": "RKTECH7621@GMAIL.COM",
+  "phone": "+91-7210476048",
+  "location_from_cv": "Delhi, India",
+  "location_priority": [
+    "Remote India",
+    "Gurgaon / Gurugram",
+    "Delhi",
+    "Visakhapatnam / Vizag"
+  ],
+  "notice_period_days": 30,
+  "linkedin_url": "https://linkedin.com/in/rahul-kumar-devops",
+  "github_url": "https://github.com/rahul-ops-lab",
+  "fde_interpretation": "Forward Deployed Engineer",
+  "relocation_exception": {
+    "allowed": true,
+    "scope": "Google, Tier-1 Tech, or high-growth AI startups",
+    "confirmed_locations": [
+      "Bengaluru",
+      "Hyderabad",
+      "Gurgaon",
+      "Pune"
+    ],
+    "note": "Remote India remains top priority; willingness to relocate for premier opportunities."
+  },
+  "as_of_year": 2027,
+  "target_date": "2027-10-17",
+  "current_official_title": "Senior DevOps Engineer",
+  "total_experience_years": 5.0,
+  "current_ctc": 2800000,
+  "target_ctc_inr_per_year": 4000000,
+  "fixed_vs_total_ctc": "Minimum 80% fixed (INR 32 LPA fixed + variable/ESOPs)",
+  "seniority_level": "Senior (5+ years experienced)",
+  "key_milestones_achieved": [
+    "Surpassed 5+ years total tech experience, clearing Senior SRE/DevOps filter barriers",
+    "Over 2.5 years tenure at Programming.com delivering enterprise logistics & cloud migrations",
+    "Production Kubeflow and MLflow pipelines deployed with automated drift detection",
+    "Istio service mesh and GitOps-driven zero-downtime deployment workflows (ArgoCD)"
+  ]
+}

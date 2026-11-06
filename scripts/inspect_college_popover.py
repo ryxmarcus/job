@@ -1,0 +1,30 @@
+import asyncio
+import sys
+from playwright.async_api import async_playwright
+
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.connect_over_cdp('http://127.0.0.1:9222')
+        pg = [page for page in b.contexts[0].pages if 'geministudentambassador' in page.url][0]
+        
+        # Click on search college input
+        inp = await pg.query_selector('input[placeholder*="Search for your college"]')
+        if inp:
+            print("Found Search for your college input. Clicking...")
+            await inp.click()
+            await asyncio.sleep(1)
+            # Press ArrowDown
+            await inp.press('ArrowDown')
+            await asyncio.sleep(0.5)
+            # Check what's in the DOM
+            txt = await pg.evaluate("""() => {
+                let pop = document.querySelector('[role="listbox"], [class*="popover"], [class*="dropdown"], [class*="select"]');
+                return pop ? pop.innerText : 'No popover element found';
+            }""")
+            print("Popover text:", txt)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+

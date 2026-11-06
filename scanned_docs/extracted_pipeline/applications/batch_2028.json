@@ -1,0 +1,42 @@
+[
+  {
+    "id": "J024",
+    "company": "Uber",
+    "role": "Staff Site Reliability Engineer",
+    "to": "infra-recruiting@uber.com",
+    "url": "https://www.uber.com/global/en/careers/list/staff-sre-infrastructure",
+    "resume_basename": "2028/uber_staff_sre",
+    "subject": "Application: Staff Site Reliability Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Uber Infrastructure team,\n\nI am applying for the Staff Site Reliability Engineer opening. With 6+ years of verified production experience\u2014including 3.6+ years leading cloud platform reliability at Programming.com\u2014I design and govern resilient distributed architectures.\n\nMy work spans multi-region failover automation, enterprise SLO frameworks, chaos testing, and mentoring engineering teams on proactive resilience. \n"
+  },
+  {
+    "id": "J025",
+    "company": "Microsoft",
+    "role": "Principal Cloud Solutions Architect",
+    "to": "careers@microsoft.com",
+    "url": "https://careers.microsoft.com/professionals/us/en/job/principal-cloud-architect",
+    "resume_basename": "2028/microsoft_principal_cloud_architect",
+    "subject": "Application: Principal Cloud Solutions Architect \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Microsoft talent team,\n\nI am applying for the Principal Cloud Solutions Architect opening in NCR. With 6+ years of technical leadership in cloud platform engineering and developer enablement, I guide organizations through large-scale cloud modernization.\n"
+  },
+  {
+    "id": "J026",
+    "company": "Snowflake",
+    "role": "Lead Forward Deployed Engineer",
+    "to": "talent@snowflake.com",
+    "url": "https://careers.snowflake.com/lead-forward-deployed-engineer",
+    "resume_basename": "2028/snowflake_lead_fde",
+    "subject": "Application: Lead Forward Deployed Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Snowflake team,\n\nI am applying for the Lead Forward Deployed Engineer role in Gurugram. Combining 6+ years of technical depth across distributed systems and direct enterprise customer delivery, I specialize in unblocking complex platform rollouts.\n"
+  },
+  {
+    "id": "J027",
+    "company": "Cohere / Frontier AI Partners",
+    "role": "Staff LLMOps / AI Infrastructure Engineer",
+    "to": "careers@cohere.com",
+    "url": "https://boards.greenhouse.io/cohere/jobs/staff-ai-infra",
+    "resume_basename": "2028/cohere_staff_llmops",
+    "subject": "Application: Staff LLMOps / AI Infrastructure Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello AI Infrastructure hiring team,\n\nI am applying for the Staff LLMOps / AI Infrastructure Engineer opening (Remote India). With 6+ years in distributed platform operations and production AI infrastructure, I architect high-throughput model serving pipelines and low-latency inference gateways.\n"
+  }
+]

@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: gcc-job-tracking-hourly
+  namespace: job-automation
+spec:
+  schedule: "0 9-19 * * *"
+  timeZone: "Asia/Kolkata"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: gcc-job-scanner
+            image: python:3.11-slim
+            command: ["python3", "job/scripts/discover_jobs.py"]
+            env:
+            - name: TARGET_CATEGORY
+              value: "GCC_INDIA"
+            - name: NOTIFICATION_EMAIL
+              value: "RKTECH7621@GMAIL.COM"
+            - name: OMIT_COMPENSATION
+              value: "true"

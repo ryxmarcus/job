@@ -1,0 +1,56 @@
+{
+  "name": "Rahul Kumar",
+  "email": "RKTECH7621@GMAIL.COM",
+  "phone": "+91-7210476048",
+  "location_from_cv": "Delhi, India",
+  "location_priority": [
+    "Remote India",
+    "Gurgaon / Gurugram",
+    "Delhi",
+    "Visakhapatnam / Vizag"
+  ],
+  "target_ctc_inr_per_year": 3000000,
+  "fixed_vs_total_ctc": "Minimum 80% fixed (INR 24-25 LPA fixed baseline)",
+  "notice_period_days": 30,
+  "current_ctc": 2000000,
+  "linkedin_url": "https://linkedin.com/in/rahul-kumar-devops",
+  "github_url": "https://github.com/rahul-ops-lab",
+  "fde_interpretation": "Forward Deployed Engineer (assumed; confirm)",
+  "current_official_title": "DevOps Engineer",
+  "last_updated": "2026-10-17",
+  "target_employer_focus": {
+    "primary_category": "Global Capability Centers (GCCs) in India",
+    "preferred_gcc_hubs": [
+      "Gurgaon / Gurugram (Cyber City, Sector 21, Sector 48)",
+      "Noida",
+      "Remote India",
+      "Bengaluru",
+      "Hyderabad"
+    ],
+    "priority_gcc_employers": [
+      "American Express Technology (Gurgaon)",
+      "Walmart Global Tech India (Gurgaon / Bengaluru)",
+      "Fidelity Investments India (Gurgaon / Bengaluru)",
+      "NatWest Group (Gurgaon)",
+      "Optum / UnitedHealth Group (Gurgaon / Noida)",
+      "Barclays Global Service Centre (Noida)",
+      "Mastercard Tech Hub (Gurgaon)",
+      "Standard Chartered GBS (Gurgaon / Bengaluru)",
+      "Lowe's India (Bengaluru / Remote)",
+      "Target Tech India (Bengaluru)"
+    ],
+    "secondary_category": "Tier-1 Tech & High-Growth AI/Cloud Platforms (Google, Atlassian, MongoDB, Databricks)",
+    "international_gcc_note": "Open to Gulf Cooperation Council (UAE/Dubai) remote or sponsored expat roles if tax-free compensation meets target."
+  },
+  "relocation_exception": {
+    "allowed": true,
+    "scope": "Top GCCs, Google, or Tier-1 Technology Companies",
+    "confirmed_locations": [
+      "Bengaluru",
+      "Hyderabad",
+      "Pune"
+    ],
+    "confirmed_on": "2026-10-17",
+    "note": "Gurgaon/NCR and Remote India remain the default; willingness to relocate for premier GCC or Tier-1 opportunities."
+  }
+}

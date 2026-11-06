@@ -1,0 +1,52 @@
+[
+  {
+    "id": "J019",
+    "company": "Teikametrics",
+    "role": "Senior Site Reliability Engineer",
+    "to": "recruiting@teikametrics.com",
+    "url": "https://job-boards.greenhouse.io/teikametrics/jobs/4361177009",
+    "resume_basename": "2027/teikametrics_senior_sre",
+    "subject": "Application: Senior Site Reliability Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Teikametrics hiring team,\n\nI am applying for your Senior Site Reliability Engineer opening (Remote India). With 5+ years of verified production systems experience\u2014including 2.6+ years at Programming.com leading cloud platform operations for enterprise logistics\u2014I specialize in AWS, EKS, Terraform automation, and high-reliability incident response. \n\nMy work includes architecting multi-cluster Kubernetes deployments, reducing release cycle times via automated GitOps, and maintaining strict availability SLIs/SLOs. I am based in Delhi and prioritize remote roles in India.\n"
+  },
+  {
+    "id": "J020",
+    "company": "MongoDB",
+    "role": "Senior Forward Deployed Engineer",
+    "to": "careers@mongodb.com",
+    "url": "https://www.mongodb.com/careers/jobs/8153125",
+    "resume_basename": "2027/mongodb_senior_fde",
+    "subject": "Application: Senior Forward Deployed Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello MongoDB recruitment team,\n\nI am applying for the Senior Forward Deployed Engineer role in Gurugram. With 5+ years of hands-on infrastructure, cloud operations, and client-facing engineering experience, I bridge technical requirements and resilient production deployment.\n\nAt Programming.com, I lead platform architecture and client deployments across complex logistics supply-chain domains, managing containerized microservices and automated infrastructure provisioning. Gurugram is my primary on-site preference.\n"
+  },
+  {
+    "id": "J021",
+    "company": "Google",
+    "role": "Systems Engineer III / Senior SRE",
+    "to": "careers@google.com",
+    "url": "https://www.google.com/about/careers/applications/jobs/results/senior-sre-india",
+    "resume_basename": "2027/google_senior_sre",
+    "subject": "Application: Systems Engineer III / Senior SRE \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Google hiring team,\n\nI am applying for the Systems Engineer III (SRE) opening in Bengaluru/Hyderabad. With 5+ years of engineering experience spanning Linux internals, Kubernetes cluster reliability, and automated system remediation, I focus on building resilient infrastructure at scale.\n\nI have approved relocation to Bengaluru or Hyderabad for Google and bring deep production experience in infrastructure automation, SLO-driven operations, and blameless post-mortem practices."
+  },
+  {
+    "id": "J022",
+    "company": "Atlassian",
+    "role": "Senior DevOps / Platform Engineer",
+    "to": "careers@atlassian.com",
+    "url": "https://www.atlassian.com/company/careers/details/senior-devops-remote-india",
+    "resume_basename": "2027/atlassian_senior_devops",
+    "subject": "Application: Senior DevOps / Platform Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Atlassian team,\n\nI am applying for the Senior DevOps / Platform Engineer role (Remote India). My 5+ years of cloud engineering experience centers on developer velocity, GitOps pipelines with ArgoCD, and secure multi-tenant Kubernetes platform infrastructure.\n\nI focus on eliminating deployment friction for distributed software teams through automated testing gates, modular infrastructure-as-code, and actionable observability. Remote India is my top location preference.\n"
+  },
+  {
+    "id": "J023",
+    "company": "Databricks",
+    "role": "Senior MLOps Platform Engineer",
+    "to": "recruiting@databricks.com",
+    "url": "https://www.databricks.com/company/careers/senior-mlops-engineer",
+    "resume_basename": "2027/databricks_senior_mlops",
+    "subject": "Application: Senior MLOps Platform Engineer \u2014 Rahul Kumar \u2014 Remote India / NCR",
+    "body": "Hello Databricks recruiting team,\n\nI am applying for the Senior MLOps Platform Engineer role. With 5+ years of experience combining enterprise cloud operations with end-to-end ML lifecycle orchestration (MLflow, Kubeflow, automated drift detection, model serving), I help teams deploy and monitor reliable production models.\n"
+  }
+]

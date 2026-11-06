@@ -1,0 +1,36 @@
+﻿RAHUL KUMAR
+Systems Engineer II / Site Reliability Engineer (SRE)
+Delhi, India (Approved for Relocation to Bengaluru) | RKTECH7621@GMAIL.COM | +91-7210476048 | LinkedIn | GitHub
+________________
+Professional Summary
+________________
+Systems and Reliability Engineer with 4 years of verified production experience operating distributed Linux systems, multi-tenant Kubernetes platforms, and enterprise cloud infrastructure. Proven background engineering automated incident remediation in Python and Bash, instrumenting full-stack observability with Prometheus and Grafana, establishing SLIs/SLOs to govern error budgets, and conducting blameless incident postmortems. Strong foundation in networking fundamentals, Linux kernel diagnostics, and zero-downtime release engineering.
+Technical Skills & Systems Competencies
+________________
+* Systems & Operating Systems: Linux (Ubuntu, RHEL, CentOS), Kernel Diagnostics, Memory Management, Process Lifecycle, Systemd, I/O Tuning
+* Networking & Protocols: TCP/IP, DNS Routing, HTTP/HTTPS, TLS/SSL, Load Balancing, Ingress, Network Debugging (tcpdump, netstat, curl)
+* Containerization & Orchestration: Kubernetes (Amazon EKS), Docker, Microservices Architecture, Ingress-NGINX, HPA
+* Programming & Automation: Python, Bash / Shell Scripting, Go fundamentals, REST APIs, Automation Scripting
+* Infrastructure as Code & CI/CD: Terraform, Ansible, Jenkins, GitHub Actions, Helm, Git Version Control
+* Observability & Reliability: Prometheus, Grafana, CloudWatch, Alertmanager, Synthetic Probes, SLIs/SLOs, Error Budgets, Incident Management
+Professional Experience
+________________
+Programming.com, Delhi | DevOps & Systems Reliability Engineer
+March 2025 – Present | Enterprise Logistics Client Engagement (Allcargo Gati)
+* Engineered and operated multi-tenant Kubernetes (Amazon EKS) clusters running 40+ microservices, maintaining 99.95% system uptime against established SLA commitments.
+* Implemented comprehensive observability infrastructure using Prometheus, Grafana, and CloudWatch; designed custom dashboards tracking request rates, error budgets, and p95/p99 latency.
+* Developed automated incident diagnosis and self-healing scripts in Python and Bash, programmatically mitigating recurring infrastructure and pod failures to reduce MTTR.
+* Diagnosed complex production incidents across Linux kernel metrics, network socket saturation, and memory limits; conducted blameless postmortems to prevent recurrence.
+* Automated zero-downtime deployments using rolling updates, readiness/liveness health probes, and automated rollback triggers across DEV, SIT, UAT, and Production.
+* Provisioned scalable AWS infrastructure (VPC, IAM, EKS, RDS, Route 53) using modular Terraform code, enforcing least-privilege security controls.
+* Partnered with software engineering teams in Agile ceremonies to eliminate operational toil and establish reliable code-release patterns.
+Midea India, Delhi | DevOps & Systems Engineer
+October 2020 – December 2022
+* Administered production Linux virtual machines on AWS EC2, standardizing configuration management and patching using Ansible playbooks.
+* Automated continuous integration and build verification pipelines in Jenkins, reducing manual release steps.
+* Managed network security groups, Route 53 DNS records, and automated S3 backup archival with lifecycle rules.
+* Performed L2/L3 production systems support, troubleshooting OS-level performance degradation and service outages.
+Education
+________________
+* Bachelor of Technology (B.Tech), Information Technology | Delhi Technological University (DTU) | 2016 – 2020
+* Master of Business Administration (MBA), Business Analytics | Delhi Technological University (DTU) | 2023 – 2025

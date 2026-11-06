@@ -1,0 +1,37 @@
+{
+  "schedule_name": "Hourly GCC job tracking and alerts",
+  "cron_expression": "0 9-19 * * *",
+  "timezone": "Asia/Kolkata",
+  "alert_channel": "EMAIL",
+  "recipient_email": "RKTECH7621@GMAIL.COM",
+  "target_roles": [
+    "Site Reliability Engineer (SRE)",
+    "DevOps Engineer",
+    "MLOps Engineer",
+    "Forward Deployed Engineer"
+  ],
+  "target_categories": [
+    "Global Capability Centers (GCCs)",
+    "Multinational Technology Hubs"
+  ],
+  "priority_companies": [
+    "American Express",
+    "Walmart Global Tech",
+    "Fidelity Investments",
+    "NatWest Group",
+    "Optum (UnitedHealth)",
+    "Barclays GSC",
+    "Mastercard Tech Hub",
+    "Standard Chartered GBS",
+    "Target Tech India",
+    "JPMorgan Chase",
+    "Wells Fargo India",
+    "Siemens Technology GCC",
+    "S&P Global",
+    "United Airlines IKC"
+  ],
+  "compensation_policy": {
+    "omit_compensation_targets": true,
+    "default_status": "Open / Not Disclosed"
+  }
+}

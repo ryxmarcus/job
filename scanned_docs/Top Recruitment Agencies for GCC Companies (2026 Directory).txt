@@ -1,0 +1,83 @@
+﻿Top Recruitment Agencies for GCC Companies (2026 Directory)
+________________
+Prepared for Rahul Kumar (Asia/Kolkata). This directory identifies the premier recruitment, executive search, and RPO partners specializing in placing Cloud, DevOps, Site Reliability, and MLOps engineering talent directly into Global Capability Centers (GCCs) across Delhi NCR, Gurgaon, Bengaluru, and Remote India.
+Strategic Value for Rahul Kumar: Over 40% of senior and mid-level technical positions at Fortune 500 GCCs are filled through dedicated recruitment partners before ever being advertised publicly. Partnering with these agencies provides direct recruiter representation, skips ATS keyword filters, and accelerates interviews for high-paying roles (INR 28–42 LPA).
+1. Master Directory of Top GCC Recruitment Partners
+________________
+
+
+Recruitment Agency
+	Specialization & Focus
+	Primary Locations
+	Official Candidate Portal / Website
+ 
+	Michael Page India
+	Market leader in mid-to-senior Tech, DevOps, SRE, and Cloud Architects for Global Capability Centers
+	Gurgaon, Delhi NCR, Bengaluru, Mumbai
+	Michael Page India
+	ABC Consultants
+	Premier 50+ year executive search firm with dedicated Technology & GCC captive practice pods
+	Delhi NCR (Connaught Place / Nehru Place), Gurgaon, Bengaluru
+	ABC Consultants
+	SutraHR
+	Top-ranked recruitment agency specializing in Fortune 500 GCC setups, FinTech, and cloud scale-ups
+	Delhi NCR, Bengaluru, Mumbai, Dubai
+	SutraHR GCC Hiring
+	Randstad India
+	AI-powered tech recruitment and enterprise RPO partner placing DevOps, AWS, and SRE talent in GCCs
+	Gurgaon, Noida, Bengaluru, Hyderabad
+	Randstad India
+	Alp Consulting
+	End-to-end recruitment specialist for multinational captives, data engineering, and cloud infrastructure
+	Bengaluru, Delhi NCR, Hyderabad, Pune
+	Alp Consulting
+	Taggd
+	Major digital recruitment and RPO partner managing large-scale tech hiring for enterprise GCCs in India
+	Gurgaon, Noida, Bengaluru, Pune
+	Taggd Digital Recruitment
+	Multi Recruit
+	Middle-to-senior tech & engineering roles for multinational captives with 70%+ offer acceptance SLAs
+	Bengaluru, Delhi NCR, Remote India
+	Multi Recruit
+	CIEL HR
+	Analytics-driven talent solutions partner placing specialized infrastructure, cloud, and SRE engineers
+	Delhi NCR, Bengaluru, Chennai, Mumbai
+	CIEL HR Services
+	2. How GCC Recruitment Agencies Operate & Best Engagement Practices
+________________
+* No Cost to Candidates: Professional recruitment firms are retained by employer clients (American Express, Walmart, Optum, NatWest, etc.); they never charge fees to job seekers.
+* Target Senior Technical Consultants: Search LinkedIn for recruiters with titles such as "Recruitment Consultant — Technology & GCCs" or "Practice Lead — Cloud, DevOps & SRE" at Michael Page, ABC Consultants, and SutraHR.
+* Lead with Verified Tech Highlights: Recruitment consultants evaluate candidates on specific core keywords (AWS, Kubernetes/EKS, Terraform, CI/CD, Python/Bash automation) and verified tenure (~4 years).
+3. Proven Recruiter Outreach Templates for LinkedIn
+________________
+Template 1: InMail to GCC Practice Leads at Michael Page / ABC Consultants
+Subject: DevOps & SRE Engineer (4 Yrs Exp | AWS, K8s, Terraform) — Exploring GCC Roles in Gurgaon / Remote
+
+
+Hi [Recruiter Name],
+
+
+I noticed you lead technology recruitment for Global Capability Centers (GCCs) at [Agency Name].
+
+
+I am a DevOps and Systems Reliability Engineer with 4 years of verified production experience managing AWS cloud infrastructure, multi-tenant Kubernetes (EKS) clusters, and automated CI/CD pipelines in Jenkins. At Programming.com, I support enterprise logistics platform operations, establishing Terraform IaC patterns, maintaining 99.95% system uptime, and automating operational workflows in Python and Bash.
+
+
+I am actively exploring DevOps / SRE opportunities with premier GCCs in Gurgaon or Remote India. My notice period is 30 days.
+
+
+I would welcome the opportunity to share my tailored CV and connect regarding relevant mandates you are managing.
+
+
+Best regards,
+Rahul Kumar
++91-7210476048 | RKTECH7621@GMAIL.COM | https://linkedin.com/in/rahul-kumar-devops
+Template 2: General Candidate Profile Registration at SutraHR / Randstad
+Candidate Name: Rahul Kumar
+Primary Role: AWS / DevOps / Site Reliability Engineer
+Total Experience: 4.0 Years (B.Tech IT + MBA Business Analytics from DTU)
+Core Competencies: AWS (EC2, EKS, RDS, S3, IAM, VPC), Terraform, Docker, Kubernetes, Jenkins, Python, Bash, Prometheus, Grafana
+Current Location: Delhi, India
+Target Locations: Remote India, Gurgaon / Gurugram, Delhi NCR (Approved for Bengaluru relocation)
+Notice Period: 30 Days
+Preferred Employer Type: Global Capability Centers (GCCs) & Tier-1 Technology Firms

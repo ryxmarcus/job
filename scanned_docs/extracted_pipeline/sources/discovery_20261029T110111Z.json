@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "20261029T110111Z",
+  "jobs": [],
+  "errors": [
+    {
+      "board": "teikametrics",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "neweratech",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "mongodb",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "cohere",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "databricks",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "rubrik",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "cloudflare",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "gitlab",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "hashicorp",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "postman",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "thinkahead",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "lingarogroup",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "zimperium",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "palantir",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    },
+    {
+      "board": "scaleai",
+      "error": "Cannot verify robots rules; skipped: <urlopen error [Errno -3] Temporary failure in name resolution>"
+    }
+  ]
+}
