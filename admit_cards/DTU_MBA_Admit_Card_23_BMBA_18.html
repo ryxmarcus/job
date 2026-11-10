@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student Dashboard | DTU ExamSetu</title>
+
+  <!-- Synchronous Anti-FOUC Theme Initializer -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('dtu_student_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts & Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+  <!-- Bootstrap CSS & System Styling -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <style>
+    :root {
+      --dtu-crimson: #800000;
+      --dtu-crimson-dark: #630000;
+      --dtu-crimson-light: #991b1b;
+      --dtu-crimson-surface: rgba(128, 0, 0, 0.04);
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --gold-500: #d97706;
+      --gold-50: #fffbeb;
+      --card-radius: 16px;
+      --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background-color: var(--slate-50);
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--slate-800);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    a {
+      color: var(--dtu-crimson);
+      transition: var(--transition-smooth);
+      text-decoration: none !important;
+    }
+    a:hover {
+      color: var(--dtu-crimson-dark);
+    }
+
+    .container-dashboard {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* ==================== 1. HERO PROFILE CARD ==================== */
+    .hero-profile-card {
+      background: linear-gradient(135deg, #700000 0%, #900c1e 48%, #1e293b 100%);
+      border-radius: var(--card-radius);
+      padding: 32px;
+      color: #ffffff;
+      box-shadow: 0 16px 36px -8px rgba(112, 0, 0, 0.22), 0 4px 14px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .hero-profile-card::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-avatar-wrap {
+      width: 114px;
+      height: 114px;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 3px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+      position: relative;
+      margin: 0 auto;
+    }
+    .hero-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-avatar-inner img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      border-radius: 50% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block !important;
+    }
+    .avatar-camera-btn {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 34px;
+      height: 34px;
+      background: var(--dtu-crimson, #800000);
+      color: #ffffff !important;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      margin: 0;
+      z-index: 5;
+    }
+    .avatar-camera-btn:hover {
+      background: #630000;
+      transform: scale(1.1);
+    }
+    .hero-avatar-initials {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--dtu-crimson);
+      text-transform: uppercase;
+    }
+    .hero-name {
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    .hero-roll {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.5px;
+      font-family: 'Inter', monospace;
+    }
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-right: 8px;
+      margin-top: 8px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      transition: var(--transition-smooth);
+    }
+    .hero-pill-badge:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .hero-actions-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .btn-hero-primary {
+      background: #ffffff;
+      color: var(--dtu-crimson);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 9px 18px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      display: inline-flex;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+    .btn-hero-primary:hover {
+      background: #f8fafc;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      color: var(--dtu-crimson-dark);
+    }
+    .btn-hero-glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 9px 16px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+    .btn-hero-glass:hover {
+      background: rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ==================== 2. QUICK ACCESS SERVICES GRID ==================== */
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.3px;
+    }
+    .section-title i {
+      color: var(--dtu-crimson);
+      margin-right: 8px;
+      font-size: 1.05rem;
+    }
+    .section-desc {
+      font-size: 0.82rem;
+      color: var(--slate-500);
+      margin: 2px 0 0 0;
+    }
+
+    .quick-tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .quick-service-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      transition: var(--transition-smooth);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none !important;
+      color: inherit !important;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .quick-service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+    .quick-card-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      transition: var(--transition-smooth);
+    }
+    .quick-service-card:hover .quick-card-icon-wrap {
+      transform: scale(1.08);
+    }
+    .card-icon-crimson { background: #fee2e2; color: #991b1b; }
+    .card-icon-blue    { background: #e0f2fe; color: #0284c7; }
+    .card-icon-emerald { background: #d1fae5; color: #059669; }
+    .card-icon-amber   { background: #fef3c7; color: #d97706; }
+    .card-icon-purple  { background: #f3e8ff; color: #7e22ce; }
+    .card-icon-teal    { background: #ccfbf1; color: #0f766e; }
+
+    .quick-card-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .quick-card-desc {
+      font-size: 0.78rem;
+      color: var(--slate-500);
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .quick-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .quick-card-action-text {
+      color: var(--dtu-crimson);
+      display: inline-flex;
+      align-items: center;
+    }
+    .quick-card-action-text i {
+      margin-left: 4px;
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+    .quick-service-card:hover .quick-card-action-text i {
+      transform: translateX(4px);
+    }
+
+    /* ==================== 3. TABBED PROFILE & ACADEMIC HUB ==================== */
+    .dashboard-tabs-card {
+      background: #ffffff;
+      border-radius: var(--card-radius);
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .custom-pill-nav {
+      background: var(--slate-50);
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--slate-200);
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .custom-pill-nav::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-pill-nav .nav-link {
+      border: none;
+      border-radius: 10px;
+      padding: 9px 18px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      background: transparent;
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+    }
+    .custom-pill-nav .nav-link i {
+      margin-right: 7px;
+      font-size: 0.9rem;
+    }
+    .custom-pill-nav .nav-link:hover {
+      color: var(--dtu-crimson);
+      background: rgba(128, 0, 0, 0.06);
+    }
+    .custom-pill-nav .nav-link.active {
+      background: var(--dtu-crimson) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(128, 0, 0, 0.25);
+    }
+    .tab-body-wrap {
+      padding: 28px;
+    }
+
+    /* Details Grid within Tabs */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .detail-item-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 14px 18px;
+      transition: var(--transition-smooth);
+    }
+    .detail-item-box:hover {
+      border-color: #cbd5e1;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .detail-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--slate-500);
+      margin-bottom: 4px;
+    }
+    .detail-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--slate-900);
+      word-break: break-word;
+    }
+
+    /* Enrolled Course Cards */
+    .course-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 16px;
+    }
+    .course-item-card {
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 16px;
+      background: #ffffff;
+      transition: var(--transition-smooth);
+      border-left: 4px solid var(--dtu-crimson);
+    }
+    .course-item-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+    .course-code-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--dtu-crimson);
+      background: rgba(128, 0, 0, 0.08);
+      padding: 3px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .course-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .course-meta {
+      font-size: 0.78rem;
+      color: var(--slate-500);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Notice item style in Tab 5 */
+    .notice-item-compact {
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      margin-bottom: 12px;
+      transition: var(--transition-smooth);
+    }
+    .notice-item-compact:hover {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Form Fields in Edit Form */
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--slate-700);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      transition: var(--transition-smooth);
+    }
+    .form-control:focus {
+      border-color: var(--dtu-crimson);
+      box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.12);
+    }
+
+    /* Legacy instruction modal */
+    .modal-instruction-content {
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==================== COMPLETE DARK MODE DASHBOARD ==================== */
+    [data-theme="dark"] {
+      --slate-900: #f8fafc;
+      --slate-800: #e2e8f0;
+      --slate-700: #cbd5e1;
+      --slate-600: #94a3b8;
+      --slate-500: #64748b;
+      --slate-200: #334155;
+      --slate-100: #1e293b;
+      --slate-50: #0f172a;
+      color-scheme: dark;
+    }
+
+    [data-theme="dark"] body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+    }
+
+    [data-theme="dark"] a {
+      color: #f87171;
+    }
+    [data-theme="dark"] a:hover {
+      color: #fca5a5;
+    }
+
+    /* 1. Hero Card in Dark Mode */
+    [data-theme="dark"] .hero-profile-card {
+      background: linear-gradient(135deg, #420b0b 0%, #2a0b16 50%, #0f172a 100%);
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 4px 14px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    [data-theme="dark"] .hero-avatar-wrap {
+      background: #0f172a;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    [data-theme="dark"] .hero-avatar-inner {
+      background: #1e293b;
+    }
+    [data-theme="dark"] .avatar-camera-btn {
+      background: #991b1b;
+      border-color: #0f172a;
+    }
+    [data-theme="dark"] .btn-hero-primary {
+      background: #ffffff;
+      color: #800000;
+    }
+    [data-theme="dark"] .btn-hero-primary:hover {
+      background: #f1f5f9;
+      color: #630000;
+    }
+    [data-theme="dark"] .btn-hero-glass {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    [data-theme="dark"] .btn-hero-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    /* 2. Section Headers */
+    [data-theme="dark"] .section-title {
+      color: #f8fafc;
+    }
+    [data-theme="dark"] .section-desc {
+      color: #94a3b8;
+    }
+
+    /* 3. Quick Access Services Grid */
+    [data-theme="dark"] .quick-service-card {
+      background: #151d2f;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      color: #e2e8f0 !important;
+    }
+    [data-theme="dark"] .quick-service-card:hover {
+      background: #1c273e;
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.45);
+      transform: translateY(-4px);
+    }
+    [data-theme="dark"] .quick-card-title {
+      color: #f8fafc;
+    }
+    [data-theme="dark"] .quick-card-desc {
+      color: #94a3b8;
+    }
+    [data-theme="dark"] .quick-card-footer {
+      border-top-color: rgba(255, 255, 255, 0.07);
+    }
+    [data-theme="dark"] .quick-card-footer .text-muted {
+      color: #94a3b8 !important;
+    }
+    [data-theme="dark"] .quick-card-action-text {
+      color: #f87171;
+    }
+
+    /* 4. Edit Profile Section */
+    [data-theme="dark"] #profileEditSection .card {
+      background: #151d2f !important;
+      border-color: #991b1b !important;
+    }
+    [data-theme="dark"] #profileEditSection .card-header {
+      background: #0f172a !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    [data-theme="dark"] #profileEditSection .card-header h5 {
+      color: #f8fafc !important;
+    }
+    [data-theme="dark"] #profileEditSection .card-body {
+      background: #151d2f !important;
+    }
+    [data-theme="dark"] .form-group label {
+      color: #cbd5e1;
+    }
+    [data-theme="dark"] .form-control {
+      background-color: #0b1120;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+    [data-theme="dark"] .form-control:focus {
+      background-color: #0b1120;
+      border-color: #f87171;
+      color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.2);
+    }
+
+    /* 5. Tabbed Profile & Academic Hub */
+    [data-theme="dark"] .dashboard-tabs-card {
+      background: #151d2f;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    }
+    [data-theme="dark"] .custom-pill-nav {
+      background: #0f172a;
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+    [data-theme="dark"] .custom-pill-nav .nav-link {
+      color: #94a3b8;
+    }
+    [data-theme="dark"] .custom-pill-nav .nav-link:hover {
+      color: #f87171;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    [data-theme="dark"] .custom-pill-nav .nav-link.active {
+      background: #800000 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(128, 0, 0, 0.4);
+    }
+    [data-theme="dark"] .tab-body-wrap {
+      background: #151d2f;
+    }
+    [data-theme="dark"] .tab-body-wrap h5 {
+      color: #f8fafc !important;
+    }
+
+    /* Details Items */
+    [data-theme="dark"] .detail-item-box {
+      background: #0b1120;
+      border-color: rgba(255, 255, 255, 0.07);
+    }
+    [data-theme="dark"] .detail-item-box:hover {
+      background: #111827;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    [data-theme="dark"] .detail-label {
+      color: #94a3b8;
+    }
+    [data-theme="dark"] .detail-value {
+      color: #f8fafc;
+    }
+
+    /* Course Cards */
+    [data-theme="dark"] .course-item-card {
+      background: #0b1120;
+      border-color: rgba(255, 255, 255, 0.07);
+      border-left: 4px solid #f87171;
+    }
+    [data-theme="dark"] .course-item-card:hover {
+      background: #111827;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+    [data-theme="dark"] .course-title {
+      color: #f8fafc;
+    }
+    [data-theme="dark"] .course-code-badge {
+      color: #fca5a5;
+      background: rgba(239, 68, 68, 0.18);
+    }
+    [data-theme="dark"] .course-meta {
+      color: #94a3b8;
+    }
+
+    /* Fees Summary Cards */
+    [data-theme="dark"] .tab-pane .card.bg-light {
+      background: #0b1120 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    [data-theme="dark"] .tab-pane .table {
+      color: #e2e8f0;
+    }
+    [data-theme="dark"] .tab-pane .table thead th {
+      background: #0f172a;
+      color: #94a3b8;
+      border-color: #334155;
+    }
+    [data-theme="dark"] .tab-pane .table td,
+    [data-theme="dark"] .tab-pane .table th {
+      border-color: rgba(255, 255, 255, 0.07);
+    }
+    [data-theme="dark"] .tab-pane .bg-light.rounded {
+      background: #0b1120 !important;
+      border-color: #334155 !important;
+    }
+
+    /* Notice item style in Tab 5 */
+    [data-theme="dark"] .notice-item-compact {
+      background: #0b1120;
+      border-color: rgba(255, 255, 255, 0.07);
+    }
+    [data-theme="dark"] .notice-item-compact:hover {
+      background: #111827;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    [data-theme="dark"] .notice-item-compact a.text-dark {
+      color: #f8fafc !important;
+    }
+    [data-theme="dark"] .notice-item-compact .text-muted {
+      color: #94a3b8 !important;
+    }
+
+    /* Modals in Dark Mode */
+    [data-theme="dark"] .modal-content {
+      background: #151d2f;
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    [data-theme="dark"] .modal-header {
+      background: #0f172a;
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+    [data-theme="dark"] .modal-header .modal-title,
+    [data-theme="dark"] .modal-header h5 {
+      color: #f8fafc !important;
+    }
+    [data-theme="dark"] .modal-header .close {
+      color: #f8fafc;
+      text-shadow: none;
+    }
+    [data-theme="dark"] .modal-footer {
+      background: #0f172a !important;
+      border-top-color: rgba(255, 255, 255, 0.08);
+    }
+    [data-theme="dark"] .modal-body {
+      background: #151d2f;
+    }
+    [data-theme="dark"] .modal-body .text-dark {
+      color: #f8fafc !important;
+    }
+    [data-theme="dark"] .modal-body .text-muted {
+      color: #94a3b8 !important;
+    }
+    [data-theme="dark"] .modal-body .bg-light {
+      background: #0b1120 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+    [data-theme="dark"] .modal-body textarea,
+    [data-theme="dark"] .modal-body input {
+      background-color: #0b1120;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+  </style>
+</head>
+
+<body>
+
+  
+
+<link rel="stylesheet" href="/bootstrap.css">
+<script src="/bootstrap.js"></script>
+
+ 
+
+    
+    
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Admit Card is currently disabled by university administration.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+
+
+  
+
+<!-- Synchronous Anti-FOUC Theme Initializer -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('dtu_student_theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Modern Responsive Header & Scalable Navigation System -->
+<header class="dtu-header sticky-top">
+  <nav class="navbar navbar-expand-lg dtu-navbar p-0">
+    <div class="container-fluid px-3 px-lg-4">
+      
+      <!-- Brand & University Identity -->
+      <a class="navbar-brand d-flex align-items-center" href="/student/home/64cb7b9313bde45627cce6ba">
+        <div class="brand-logo-wrap mr-2">
+          <img src="/logo.png" alt="DTU Crest" class="brand-logo" onerror="this.src='/logo.png';" />
+        </div>
+        <div class="d-flex flex-column brand-text-wrap">
+          <span class="brand-title">DTU <span class="brand-accent">ExamSetu</span></span>
+          <span class="brand-subtitle"><i class="fas fa-user-graduate mr-1"></i>Student Portal</span>
+        </div>
+      </a>
+
+      <!-- Mobile Controls (Quick Bell + Theme Toggle + Hamburger) -->
+      <div class="d-flex align-items-center d-lg-none ml-auto">
+        
+          <a href="/student/notices" class="mobile-quick-bell mr-2" title="Exam Notices">
+            <i class="fas fa-bell"></i>
+            
+              <span class="bell-badge-pulse"></span>
+            
+          </a>
+        
+        <button type="button" class="btn-theme-toggle mobile-theme-btn mr-2" onclick="toggleStudentTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <i class="fas fa-moon theme-icon-moon"></i>
+          <i class="fas fa-sun theme-icon-sun"></i>
+        </button>
+        <button class="navbar-toggler modern-hamburger p-2 border-0" type="button" data-toggle="collapse"
+          data-target="#dtuStudentNav" aria-controls="dtuStudentNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collapsible Navigation & Scalable Dropdown Groups -->
+      <div class="collapse navbar-collapse" id="dtuStudentNav">
+        <ul class="navbar-nav mx-auto align-items-lg-center">
+          
+          <!-- 1. Home / Dashboard -->
+          <li class="nav-item">
+            <a class="nav-link nav-btn" href="/student/home/64cb7b9313bde45627cce6ba">
+              <i class="fas fa-th-large nav-icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <!-- 2. Academics Dropdown Group -->
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-btn dropdown-toggle" href="#" id="academicsDropdown" role="button"
+                data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-graduation-cap nav-icon"></i>
+                <span>Academics</span>
+              </a>
+              <div class="dropdown-menu modern-dropdown-menu shadow-lg animate-slide-in" aria-labelledby="academicsDropdown">
+                <div class="dropdown-header text-uppercase">Academic Services</div>
+                
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/home/64cb7b9313bde45627cce6ba#enrolled-courses">
+                    <div class="dropdown-icon-box bg-info-soft text-info mr-3">
+                      <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Enrolled Courses</div>
+                      <small class="text-muted">Current semester subjects</small>
+                    </div>
+                  </a>
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/summerSem/64cb7b9313bde45627cce6ba">
+                    <div class="dropdown-icon-box bg-warning-soft text-warning mr-3">
+                      <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Backlog / Summer Exam</div>
+                      <small class="text-muted">Re-appear course registration</small>
+                    </div>
+                  </a>
+                
+
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/moocDetails/64cb7b9313bde45627cce6ba">
+                    <div class="dropdown-icon-box bg-teal-soft text-teal mr-3">
+                      <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">MOOC Courses</div>
+                      <small class="text-muted">NPTEL / SWAYAM credits</small>
+                    </div>
+                  </a>
+                
+              </div>
+            </li>
+          
+
+          <!-- 3. Examinations Dropdown Group -->
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-btn dropdown-toggle" href="#" id="examsDropdown" role="button"
+                data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-file-signature nav-icon"></i>
+                <span>Examinations</span>
+              </a>
+              <div class="dropdown-menu modern-dropdown-menu shadow-lg animate-slide-in" aria-labelledby="examsDropdown">
+                <div class="dropdown-header text-uppercase">Exams & Assessment</div>
+
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/marksheets/64cb7b9313bde45627cce6ba">
+                    <div class="dropdown-icon-box bg-success-soft text-success mr-3">
+                      <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Marksheets & Grades</div>
+                      <small class="text-muted">Semester result cards</small>
+                    </div>
+                  </a>
+                
+
+                
+              </div>
+            </li>
+          
+
+          <!-- 4. Student Services Dropdown Group -->
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-btn dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-layer-group nav-icon"></i>
+                <span>Services</span>
+                
+                  <span class="badge badge-danger badge-pill ml-1" style="font-size: 10px; padding: 2px 6px;">
+                    1
+                  </span>
+                
+              </a>
+              <div class="dropdown-menu modern-dropdown-menu shadow-lg animate-slide-in" aria-labelledby="servicesDropdown">
+                <div class="dropdown-header text-uppercase">Student Services</div>
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/notices">
+                    <div class="dropdown-icon-box bg-danger-soft text-danger mr-3">
+                      <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Exam Notices & Circulars</div>
+                      <small class="text-muted">Important university announcements</small>
+                    </div>
+                    
+                      <span class="badge badge-danger ml-auto" style="font-size: 10px;">Urgent</span>
+                    
+                  </a>
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/certificates/64cb7b9313bde45627cce6ba">
+                    <div class="dropdown-icon-box bg-primary-soft text-primary mr-3">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Official Certificates</div>
+                      <small class="text-muted">Bonafide, Provisional & Transcripts</small>
+                    </div>
+                  </a>
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/grievances">
+                    <div class="dropdown-icon-box bg-info-soft text-info mr-3">
+                      <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Requests & Grievances</div>
+                      <small class="text-muted">Submit & track support tickets</small>
+                    </div>
+                  </a>
+                
+
+                
+                  <a class="dropdown-item d-flex align-items-center" href="/student/reregisterationdetails/64cb7b9313bde45627cce6ba">
+                    <div class="dropdown-icon-box bg-secondary-soft text-secondary mr-3">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div>
+                      <div class="dropdown-title">Fee & Re-registration Details</div>
+                      <small class="text-muted">Upload and review payment slips</small>
+                    </div>
+                  </a>
+                
+              </div>
+            </li>
+          
+
+        </ul>
+
+        <!-- Right Side: Notice Bell + Profile Pill with Action Menu -->
+        <div class="navbar-nav ml-lg-auto align-items-lg-center">
+          
+          <!-- Notice Quick Bell (Desktop) -->
+          
+            <a href="/student/notices" class="btn-notice-bell d-none d-lg-flex mr-2" title="Campus Notices">
+              <i class="fas fa-bell"></i>
+              
+                <span class="bell-badge-count">1</span>
+              
+            </a>
+          
+
+          <!-- Theme Toggle Button (Desktop) -->
+          <button type="button" class="btn-theme-toggle d-none d-lg-flex mr-3" onclick="toggleStudentTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+            <i class="fas fa-moon theme-icon-moon"></i>
+            <i class="fas fa-sun theme-icon-sun"></i>
+          </button>
+
+          <!-- Student Profile Pill Dropdown -->
+          <div class="nav-item dropdown">
+            <a class="nav-link student-profile-pill dropdown-toggle d-flex align-items-center" href="#"
+              id="studentUserDropdown" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="profile-pill-avatar mr-2">
+                
+                  <img src="/student/photo/64cb7b9313bde45627cce6ba" alt="RAHUL" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'avatar-initials\'>R</span>';" />
+                
+              </div>
+              <div class="profile-pill-text d-none d-md-flex flex-column text-left mr-1">
+                <span class="pill-name">RAHUL</span>
+                <span class="pill-roll">23/BMBA/18</span>
+              </div>
+              <i class="fas fa-chevron-down pill-chevron ml-1"></i>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right modern-dropdown-menu profile-dropdown-box shadow-lg animate-slide-in"
+              aria-labelledby="studentUserDropdown">
+              <div class="user-dropdown-header px-3 py-2 border-bottom">
+                <div class="font-weight-bold text-dark">RAHUL</div>
+                <div class="small text-muted">23/BMBA/18 &bull; BMBA Sem 4</div>
+              </div>
+              <a class="dropdown-item py-2" href="/student/home/64cb7b9313bde45627cce6ba">
+                <i class="fas fa-user-circle text-primary mr-2"></i>My Profile
+              </a>
+              <a class="dropdown-item py-2" href="/student/home/64cb7b9313bde45627cce6ba#change-password" onclick="if(window.$ && $('#changePasswordModal').length){ $('#changePasswordModal').modal('show'); return false; }">
+                <i class="fas fa-key text-warning mr-2"></i>Change Password
+              </a>
+              <button class="dropdown-item py-2 d-flex align-items-center btn btn-link" style="text-decoration: none;" type="button" onclick="toggleStudentTheme()">
+                <span class="mr-2" style="width: 18px; text-align: center;">
+                  <i class="fas fa-moon theme-icon-moon"></i>
+                  <i class="fas fa-sun theme-icon-sun"></i>
+                </span>
+                <span id="themeMenuLabel">Toggle Theme</span>
+              </button>
+              <div class="dropdown-divider my-1"></div>
+              <button class="dropdown-item py-2 text-danger font-weight-bold btn btn-link" style="text-decoration: none;"
+                onclick="logoutStudent()">
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<!-- Styles for Modern Navbar & Dropdown Hub -->
+<style>
+  :root {
+    --dtu-crimson: #800000;
+    --dtu-crimson-dark: #660000;
+    --dtu-crimson-light: #991b1b;
+    --dtu-accent: #b91c1c;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+  }
+
+  .dtu-header {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow: 0 4px 20px -3px rgba(0, 0, 0, 0.05);
+    z-index: 1040;
+    transition: all 0.25s ease;
+  }
+
+  .dtu-navbar {
+    min-height: 66px;
+  }
+
+  /* Brand Styling */
+  .navbar-brand {
+    padding: 6px 0;
+    text-decoration: none !important;
+  }
+  .brand-logo-wrap {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow: hidden;
+  }
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+  .brand-text-wrap {
+    line-height: 1.15;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--slate-800);
+    letter-spacing: -0.3px;
+  }
+  .brand-accent {
+    color: var(--dtu-crimson);
+  }
+  .brand-subtitle {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--slate-600);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  /* Nav Links & Buttons */
+  .dtu-navbar .navbar-nav .nav-link.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    margin: 2px 3px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--slate-700);
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dtu-navbar .navbar-nav .nav-link.nav-btn .nav-icon {
+    font-size: 0.95rem;
+    margin-right: 7px;
+    color: var(--slate-600);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  .dtu-navbar .navbar-nav .nav-link.nav-btn:hover {
+    color: var(--dtu-crimson);
+    background: rgba(128, 0, 0, 0.05);
+  }
+  .dtu-navbar .navbar-nav .nav-link.nav-btn:hover .nav-icon {
+    color: var(--dtu-crimson);
+    transform: translateY(-1px);
+  }
+
+  /* Dropdown Styling */
+  .dtu-navbar .dropdown {
+    position: relative;
+  }
+  .dtu-navbar .modern-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 280px;
+    margin-top: 6px;
+    background: #ffffff;
+    box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+  .dtu-navbar .profile-dropdown-box {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  /* When open / active */
+  .dtu-navbar .dropdown.show > .modern-dropdown-menu,
+  .dtu-navbar .dropdown.open > .modern-dropdown-menu,
+  .dtu-navbar .modern-dropdown-menu.show,
+  .dtu-navbar .modern-dropdown-menu.open {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Desktop Hover Support */
+  @media (min-width: 992px) {
+    .dtu-navbar .nav-item.dropdown:hover > .modern-dropdown-menu {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .dtu-navbar .nav-item.dropdown:hover > .nav-link.dropdown-toggle {
+      color: var(--dtu-crimson);
+      background: rgba(128, 0, 0, 0.05);
+    }
+  }
+  .dropdown-header {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.8px;
+    padding: 6px 12px;
+  }
+  .modern-dropdown-menu .dropdown-item {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--slate-800);
+    transition: all 0.15s ease;
+  }
+  .modern-dropdown-menu .dropdown-item:hover {
+    background-color: #f8fafc;
+    color: var(--dtu-crimson);
+  }
+  .dropdown-icon-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .dropdown-title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  /* Soft badge colors */
+  .bg-primary-soft { background: #eff6ff; }
+  .bg-danger-soft { background: #fef2f2; }
+  .bg-success-soft { background: #f0fdf4; }
+  .bg-info-soft { background: #f0f9ff; }
+  .bg-warning-soft { background: #fffbeb; }
+  .bg-purple-soft { background: #faf5ff; }
+  .text-purple { color: #9333ea; }
+  .bg-teal-soft { background: #f0fdfa; }
+  .text-teal { color: #0d9488; }
+
+  /* Notice Bell Button */
+  .btn-notice-bell, .mobile-quick-bell {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-700);
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+  .btn-notice-bell:hover, .mobile-quick-bell:hover {
+    color: var(--dtu-crimson);
+    background: #fee2e2;
+    border-color: #fca5a5;
+  }
+  .bell-badge-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+  }
+  .bell-badge-pulse {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: #dc2626;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff;
+    animation: bellPulse 1.8s infinite;
+  }
+  @keyframes bellPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+  }
+
+  /* Student Profile Pill */
+  .student-profile-pill {
+    padding: 4px 10px 4px 5px !important;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+  }
+  .student-profile-pill:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+  }
+  .profile-pill-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--dtu-crimson);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .profile-pill-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .profile-pill-text {
+    line-height: 1.1;
+  }
+  .pill-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--slate-800);
+  }
+  .pill-roll {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--slate-600);
+  }
+  .pill-chevron {
+    font-size: 0.65rem;
+    color: #94a3b8;
+  }
+
+  /* Hamburger Styling */
+  .modern-hamburger {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  .hamburger-bar {
+    width: 22px;
+    height: 2.5px;
+    background: var(--slate-800);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+
+  /* Dropdown animation */
+  @media (min-width: 992px) {
+    .animate-slide-in {
+      animation: navSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  }
+  @keyframes navSlideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Mobile Layout Adjustments */
+  @media (max-width: 991.98px) {
+    .dtu-navbar .navbar-collapse {
+      display: none;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e2e8f0;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .dtu-navbar .navbar-collapse.show {
+      display: block !important;
+    }
+    .dtu-navbar .modern-dropdown-menu {
+      position: static !important;
+      float: none !important;
+      width: 100% !important;
+      box-shadow: none !important;
+      border: 1px solid #f1f5f9;
+      background: #f8fafc;
+      margin-top: 4px;
+      padding: 4px;
+    }
+  }
+
+  /* Theme Toggle Button Styling */
+  .btn-theme-toggle {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-700);
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+  }
+  .btn-theme-toggle:hover {
+    color: #d97706;
+    background: #fef3c7;
+    border-color: #fcd34d;
+    transform: rotate(15deg);
+  }
+  .theme-icon-sun {
+    display: none;
+    color: #facc15;
+  }
+  .theme-icon-moon {
+    display: block;
+    color: #64748b;
+  }
+  [data-theme="dark"] .theme-icon-sun {
+    display: block !important;
+  }
+  [data-theme="dark"] .theme-icon-moon {
+    display: none !important;
+  }
+
+  /* ==================== DARK MODE (STUDENT NAVBAR) ==================== */
+  [data-theme="dark"] .dtu-header {
+    background: rgba(15, 23, 42, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px -3px rgba(0, 0, 0, 0.4);
+  }
+  [data-theme="dark"] .brand-title {
+    color: #f8fafc;
+  }
+  [data-theme="dark"] .brand-accent {
+    color: #f87171;
+  }
+  [data-theme="dark"] .brand-subtitle {
+    color: #94a3b8;
+  }
+  [data-theme="dark"] .brand-logo-wrap {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  [data-theme="dark"] .dtu-navbar .navbar-nav .nav-link.nav-btn {
+    color: #cbd5e1;
+  }
+  [data-theme="dark"] .dtu-navbar .navbar-nav .nav-link.nav-btn .nav-icon {
+    color: #94a3b8;
+  }
+  [data-theme="dark"] .dtu-navbar .navbar-nav .nav-link.nav-btn:hover {
+    color: #fca5a5;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  [data-theme="dark"] .dtu-navbar .navbar-nav .nav-link.nav-btn:hover .nav-icon {
+    color: #f87171;
+  }
+  [data-theme="dark"] .modern-dropdown-menu {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  [data-theme="dark"] .dropdown-header {
+    color: #64748b;
+  }
+  [data-theme="dark"] .modern-dropdown-menu .dropdown-item {
+    color: #cbd5e1;
+  }
+  [data-theme="dark"] .modern-dropdown-menu .dropdown-item:hover {
+    background-color: #334155;
+    color: #ffffff;
+  }
+  [data-theme="dark"] .dropdown-title {
+    color: #f1f5f9;
+  }
+  [data-theme="dark"] .modern-dropdown-menu .dropdown-item small.text-muted {
+    color: #94a3b8 !important;
+  }
+  [data-theme="dark"] .bg-primary-soft { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; }
+  [data-theme="dark"] .bg-danger-soft { background: rgba(239, 68, 68, 0.15); color: #f87171 !important; }
+  [data-theme="dark"] .bg-success-soft { background: rgba(16, 185, 129, 0.15); color: #34d399 !important; }
+  [data-theme="dark"] .bg-info-soft { background: rgba(14, 165, 233, 0.15); color: #38bdf8 !important; }
+  [data-theme="dark"] .bg-warning-soft { background: rgba(245, 158, 11, 0.15); color: #fbbf24 !important; }
+  [data-theme="dark"] .bg-purple-soft { background: rgba(168, 85, 247, 0.15); color: #c084fc !important; }
+  [data-theme="dark"] .bg-teal-soft { background: rgba(20, 184, 166, 0.15); color: #2dd4bf !important; }
+
+  [data-theme="dark"] .btn-notice-bell,
+  [data-theme="dark"] .mobile-quick-bell,
+  [data-theme="dark"] .btn-theme-toggle {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+  }
+  [data-theme="dark"] .btn-notice-bell:hover,
+  [data-theme="dark"] .mobile-quick-bell:hover,
+  [data-theme="dark"] .btn-theme-toggle:hover {
+    background: #334155;
+    color: #facc15;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  [data-theme="dark"] .student-profile-pill {
+    background: #1e293b;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  [data-theme="dark"] .student-profile-pill:hover {
+    background: #334155;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  [data-theme="dark"] .pill-name {
+    color: #f8fafc;
+  }
+  [data-theme="dark"] .pill-roll {
+    color: #94a3b8;
+  }
+  [data-theme="dark"] .user-dropdown-header {
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  [data-theme="dark"] .user-dropdown-header .text-dark {
+    color: #f8fafc !important;
+  }
+  [data-theme="dark"] .user-dropdown-header .text-muted {
+    color: #94a3b8 !important;
+  }
+  [data-theme="dark"] .dropdown-divider {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+  [data-theme="dark"] .hamburger-bar {
+    background: #f8fafc;
+  }
+  @media (max-width: 991.98px) {
+    [data-theme="dark"] .dtu-navbar .navbar-collapse {
+      background: #0f172a;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    [data-theme="dark"] .modern-dropdown-menu {
+      background: #1e293b !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+  }
+  /* Universal Dark Mode Fallback for all student pages */
+  [data-theme="dark"] body {
+    background-color: #0b0f19 !important;
+    color: #e2e8f0;
+  }
+  [data-theme="dark"] .card,
+  [data-theme="dark"] .card-panel,
+  [data-theme="dark"] .notice-card {
+    background-color: #151d2f !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #e2e8f0 !important;
+  }
+  [data-theme="dark"] .page-block h5,
+  [data-theme="dark"] .card-panel h5,
+  [data-theme="dark"] .notice-card h5 {
+    color: #f8fafc !important;
+  }
+  [data-theme="dark"] .table {
+    color: #e2e8f0 !important;
+  }
+  [data-theme="dark"] .table th,
+  [data-theme="dark"] .table td {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+</style>
+
+<!-- Client-side Scripts (Autonomous Dropdowns, Logout & Watchdog) -->
+<script>
+  // Autonomous Navbar Dropdowns & Mobile Collapse Controller (Zero Dependency)
+  (function () {
+    function initNavbarInteractions() {
+      var navbar = document.querySelector('.dtu-navbar');
+      if (!navbar) return;
+
+      var toggles = navbar.querySelectorAll('[data-toggle="dropdown"], [data-bs-toggle="dropdown"]');
+      toggles.forEach(function (toggle) {
+        if (toggle.dataset.navBound === 'true') return;
+        toggle.dataset.navBound = 'true';
+
+        toggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          var parent = toggle.closest('.dropdown');
+          if (!parent) return;
+          var menu = parent.querySelector('.dropdown-menu');
+          var isOpen = parent.classList.contains('show') || (menu && menu.classList.contains('show'));
+
+          // Close all other dropdowns
+          closeAllDropdowns(navbar);
+
+          if (!isOpen) {
+            parent.classList.add('show');
+            parent.classList.add('open');
+            if (menu) {
+              menu.classList.add('show');
+              menu.classList.add('open');
+            }
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Mobile Hamburger Toggle
+      var hamburger = navbar.querySelector('.navbar-toggler');
+      var collapseEl = document.getElementById('dtuStudentNav');
+      if (hamburger && collapseEl && hamburger.dataset.navBound !== 'true') {
+        hamburger.dataset.navBound = 'true';
+        hamburger.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          collapseEl.classList.toggle('show');
+          var isExpanded = collapseEl.classList.contains('show');
+          hamburger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        });
+      }
+
+      // Close open dropdowns on outside click or Escape
+      if (!window.__dtuNavbarGlobalBound) {
+        window.__dtuNavbarGlobalBound = true;
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.dtu-navbar .dropdown')) {
+            closeAllDropdowns(document);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            closeAllDropdowns(document);
+          }
+        });
+      }
+    }
+
+    function closeAllDropdowns(root) {
+      root.querySelectorAll('.dtu-navbar .dropdown.show, .dtu-navbar .dropdown.open').forEach(function (dd) {
+        dd.classList.remove('show');
+        dd.classList.remove('open');
+      });
+      root.querySelectorAll('.dtu-navbar .dropdown-menu.show, .dtu-navbar .dropdown-menu.open').forEach(function (m) {
+        m.classList.remove('show');
+        m.classList.remove('open');
+      });
+      root.querySelectorAll('.dtu-navbar [data-toggle="dropdown"][aria-expanded="true"]').forEach(function (t) {
+        t.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initNavbarInteractions);
+    } else {
+      initNavbarInteractions();
+    }
+  })();
+
+  // Global Student Dark / Light Theme Controller
+  function toggleStudentTheme() {
+    var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    var nextTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    try {
+      localStorage.setItem('dtu_student_theme', nextTheme);
+    } catch (e) {}
+
+    updateThemeLabels(nextTheme);
+
+    // Notify any components or listeners
+    window.dispatchEvent(new CustomEvent('dtuThemeChanged', { detail: { theme: nextTheme } }));
+  }
+
+  function updateThemeLabels(theme) {
+    var labelEl = document.getElementById('themeMenuLabel');
+    if (labelEl) {
+      labelEl.textContent = (theme === 'dark') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+  }
+
+  // Sync label on load
+  document.addEventListener('DOMContentLoaded', function () {
+    var active = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeLabels(active);
+  });
+  function logoutStudent() {
+    fetch('/student/logout', { method: 'POST' })
+      .then(res => res.json())
+      .then(data => {
+        if (data.redirect) window.location.href = data.redirect;
+      })
+      .catch(err => {
+        alert('Failed to logout. Please try again.');
+      });
+  }
+
+  // Automatic watchdog: If account logs in from another device/IP, immediately kick out previous session
+  
+    (function () {
+      var isChecking = false;
+      function checkDeviceSession() {
+        if (isChecking || window.isFormSubmitting) return;
+        isChecking = true;
+        fetch('/student/api/session-check', { credentials: 'same-origin' })
+          .then(function (res) {
+            if (!res.ok) return null;
+            return res.json();
+          })
+          .then(function (data) {
+            isChecking = false;
+            if (data && data.valid === false && data.reason === 'ssid_replaced') {
+              window.location.href = data.redirect || '/student/login?auth_error=' + encodeURIComponent(data.message || 'You have been logged out because this account was logged in from another device.');
+            }
+          })
+          .catch(function () {
+            isChecking = false;
+          });
+      }
+
+      setInterval(checkDeviceSession, 30000);
+    })();
+  
+</script>
+
+
+  
+<!-- Ask Pareeksha 👩‍🎓 AI Academic Assistant Widget Partial -->
+<link rel="stylesheet" href="/chatbot/chatbot.css">
+
+<div id="ask-pareeksha-root">
+  <!-- Floating Trigger Button -->
+  <button id="pareeksha-trigger-btn" class="pareeksha-trigger" title="Ask Pareeksha (AI Academic Assistant)" aria-label="Open Ask Pareeksha AI Chatbot">
+    <div class="pareeksha-pulse-ring"></div>
+    <span class="pareeksha-avatar-icon">👩‍🎓</span>
+    <span id="pareeksha-badge" class="pareeksha-badge">1</span>
+  </button>
+
+  <!-- Popup Chat Window -->
+  <div id="pareeksha-window" class="pareeksha-window" role="dialog" aria-label="Ask Pareeksha Conversation Window">
+    <!-- Header -->
+    <div class="pareeksha-header">
+      <div class="pareeksha-header-left">
+        <div class="pareeksha-header-avatar">👩‍🎓</div>
+        <div class="pareeksha-title-wrap">
+          <h3 class="pareeksha-title">Ask Pareeksha</h3>
+          <div class="pareeksha-status-pill">
+            <span class="pareeksha-status-dot"></span>
+            Online • परीक्षा
+          </div>
+        </div>
+      </div>
+      <div class="pareeksha-header-actions">
+        <button id="pareeksha-clear-btn" class="pareeksha-tool-btn" title="Clear Chat History">🗑️</button>
+        <button id="pareeksha-min-btn" class="pareeksha-tool-btn" title="Minimize">−</button>
+        <button id="pareeksha-close-btn" class="pareeksha-tool-btn" title="Close">✕</button>
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="pareeksha-messages" class="pareeksha-messages">
+      <!-- Chat bubbles populated dynamically via chatbot.js -->
+    </div>
+
+    <!-- Suggestions Bar -->
+    <div id="pareeksha-suggestions" class="pareeksha-suggestions">
+      <!-- Quick chips rendered dynamically -->
+    </div>
+
+    <!-- Input Footer -->
+    <div class="pareeksha-footer">
+      <input
+        type="text"
+        id="pareeksha-input"
+        class="pareeksha-input"
+        placeholder="Ask about courses, notices, grievances..."
+        autocomplete="off"
+        maxlength="600"
+      />
+      <button id="pareeksha-send-btn" class="pareeksha-send-btn" title="Send Message" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.__PAREEKSHA_STUDENT_NAME = "RAHUL ";
+</script>
+<script src="/chatbot/chatbot.js"></script>
+
+
+
+  <style>
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(26, 25, 25, 0.8);
+      z-index: 9999; /* Ensure loader is above other elements */
+    }
+    .hidden {
+      display: none;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      z-index: 999; /* Ensure overlay appears above other elements */
+    }
+    #page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#h3 {
+  color: white;
+}
+
+#ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#ring:nth-child(1) {
+  border-bottom: 8px solid rgb(255, 141, 249);
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#ring:nth-child(2) {
+  border-bottom: 8px solid rgb(255,65,106);
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#ring:nth-child(3) {
+  border-bottom: 8px solid rgb(0,255,255);
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#ring:nth-child(4) {
+  border-bottom: 8px solid rgb(252, 183, 55);
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+</style>
+<div class="loader-container">
+    <div id="page">
+        <div id="container">
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="ring"></div>
+            <div id="h3">loading</div>
+        </div>
+</div>
+
+
+  </div>
+   
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    // This event listener will be triggered when the whole page has finished loading.
+    window.addEventListener('load', function() {
+      // Get the loader element
+      const loader = document.querySelector('.loader-container');
+      // Hide the loader by adding the 'hidden' class
+      loader.classList.add('hidden');
+    });
+  </script>
+
+  <!-- ==================== URGENT ANNOUNCEMENT BANNER ==================== -->
+  
+    <div class="container-dashboard pt-3 pb-0">
+      
+        <div class="alert alert-danger shadow-sm d-flex flex-column flex-md-row align-items-md-center justify-content-between p-3 mb-3"
+          style="border-left: 5px solid #dc3545; border-radius: 12px; background: #fff5f5;">
+          <div class="d-flex align-items-start align-items-md-center mb-2 mb-md-0">
+            <span class="badge badge-danger p-2 mr-3" style="font-size: 15px; border-radius: 8px;">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <div>
+              <div class="font-weight-bold text-danger" style="font-size: 0.95rem;">
+                URGENT ANNOUNCEMENT: Tentative Datesheet of End Term Examination, Nov/Dec-2026
+              </div>
+              <div class="small text-secondary mt-1">
+                Dear Student,
+
+The Tentative Datesheet of End Term Examination, Nov/Dec-2026 is released and uploaded on DTU Examination Website (https://...
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center ml-md-3">
+            
+              <a href="/student/notices/download/6aedc16d2636249a0f802a2b" class="btn btn-sm btn-outline-danger mr-2 text-nowrap font-weight-bold">
+                <i class="fas fa-paperclip mr-1"></i>Download PDF
+              </a>
+            
+            <a href="/student/notices" class="btn btn-sm btn-danger text-nowrap font-weight-bold">
+              View Notice &rarr;
+            </a>
+          </div>
+        </div>
+      
+    </div>
+  
+
+  <div class="container-dashboard">
+    
+
+    <!-- ==================== 1. HERO PROFILE CARD ==================== -->
+    <div class="hero-profile-card">
+      <div class="row align-items-center">
+        
+        <!-- Avatar Column -->
+        <div class="col-auto mb-3 mb-md-0">
+          <div class="hero-avatar-wrap">
+            <div class="hero-avatar-inner">
+  <img id="studentPhoto"
+       src="/student/photo/64cb7b9313bde45627cce6ba"
+       alt="RAHUL   KUMAR"
+       onerror="this.onerror=null; this.src='/studentAvatar.png';">
+</div>
+
+<!-- Upload / Change Photo Trigger attached to avatar circle -->
+<form id="studentPhotoUploadForm" action="/student/photo/64cb7b9313bde45627cce6ba" method="post" enctype="multipart/form-data" class="m-0 p-0">
+  <input type="file"
+         id="studentPhotoInput"
+         name="photo"
+         accept="image/jpeg,.jpg,.jpeg"
+         capture="camera"
+         onchange="handleStudentPhotoUpload(this)"
+         style="display: none;"
+         required />
+  <label for="studentPhotoInput" class="avatar-camera-btn" title="Upload or change profile photo">
+    <i class="fas fa-camera"></i>
+  </label>
+</form>
+
+<script>
+  (function () {
+    var MAX_KB = 300;
+
+    window.handleStudentPhotoUpload = function (input) {
+      var file = input.files && input.files[0];
+      if (!file) return;
+
+      if (file.size > MAX_KB * 1024) {
+        alert("Photo size exceeds " + MAX_KB + " KB. Please choose a smaller photo file.");
+        input.value = "";
+        return;
+      }
+      if (!/^image\/jpe?g$/i.test(file.type)) {
+        alert("Only JPEG photos (.jpg / .jpeg) are supported.");
+        input.value = "";
+        return;
+      }
+
+      if (confirm("Upload selected image as your official profile photo?")) {
+        document.getElementById("studentPhotoUploadForm").submit();
+      } else {
+        input.value = "";
+      }
+    };
+
+    var img = document.getElementById("studentPhoto");
+    if (img) {
+      img.addEventListener("error", function () {
+        img.src = "/studentAvatar.png";
+        img.alt = "No photo uploaded";
+      });
+    }
+  })();
+</script>
+          </div>
+        </div>
+
+        <!-- Student Key Bio Column -->
+        <div class="col-md-7 mb-3 mb-md-0">
+          <div class="hero-name">RAHUL   KUMAR</div>
+          <div class="hero-roll mb-2"><i class="fas fa-id-card-alt mr-2"></i>23/BMBA/18</div>
+          
+          <div class="d-flex flex-wrap align-items-center">
+            <span class="hero-pill-badge" title="Degree Programme">
+              <i class="fas fa-graduation-cap mr-1"></i>BMBA
+            </span>
+            <span class="hero-pill-badge" title="Branch / Specialization">
+              <i class="fas fa-code-branch mr-1"></i>Master of Business Administration(Business Analytics)
+            </span>
+            <span class="hero-pill-badge" title="Current Semester">
+              <i class="fas fa-layer-group mr-1"></i>Semester 4
+            </span>
+            
+              <span class="hero-pill-badge" title="Admission Batch">
+                <i class="fas fa-calendar-alt mr-1"></i>Batch 2023
+              </span>
+            
+          </div>
+        </div>
+
+        <!-- Quick Action Buttons Column -->
+        <div class="col-md-auto ml-md-auto text-md-right">
+          <div class="hero-actions-bar justify-content-md-end">
+            
+              <button class="btn btn-hero-primary" id="editProfileBtn" onclick="toggleEditProfile()">
+                <i class="fas fa-user-edit mr-2"></i>Edit Profile
+              </button>
+            
+            <button class="btn btn-hero-glass" type="button" data-toggle="modal" data-target="#changePasswordModal">
+              <i class="fas fa-key mr-2"></i>Change Password
+            </button>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 2. QUICK ACCESS SERVICES GRID (ONE-CLICK HUB) ==================== -->
+    <div class="section-title-wrap">
+      <div>
+        <h4 class="section-title"><i class="fas fa-th-large"></i>Quick Access Services</h4>
+        <p class="section-desc">One-click navigation to your examinations, registrations, and official records</p>
+      </div>
+    </div>
+
+    <div class="quick-tiles-grid">
+
+      <!-- Tile 1: Course Registration -->
+      
+
+      <!-- Tile 2: Admit Card -->
+      
+
+      <!-- Tile 3: Marksheets & Results -->
+      
+        <a href="/student/marksheets/64cb7b9313bde45627cce6ba" class="quick-service-card">
+          <div>
+            <div class="quick-card-icon-wrap card-icon-emerald">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="quick-card-title">Marksheets & Grades</div>
+            <div class="quick-card-desc">View semester-wise consolidated results, grade cards, and earned credits.</div>
+          </div>
+          <div class="quick-card-footer">
+            <span class="text-muted small">All Semesters</span>
+            <span class="quick-card-action-text">View Results <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      
+
+      <!-- Tile 4: Exam Notices & Circulars -->
+      
+        <a href="/student/notices" class="quick-service-card">
+          <div>
+            <div class="quick-card-icon-wrap card-icon-amber">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="quick-card-title">Exam Notices</div>
+            <div class="quick-card-desc">Official examination circulars, schedules, guidelines, and updates.</div>
+          </div>
+          <div class="quick-card-footer">
+            
+              <span class="badge badge-danger px-2 py-1" style="font-size: 9px;">1 Urgent</span>
+            
+            <span class="quick-card-action-text">Notice Board <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      
+
+      <!-- Tile 5: Certificates Portal -->
+      
+        <a href="/student/certificates/64cb7b9313bde45627cce6ba" class="quick-service-card">
+          <div>
+            <div class="quick-card-icon-wrap card-icon-purple">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="quick-card-title">Official Certificates</div>
+            <div class="quick-card-desc">Request Bonafide, Provisional, Transcripts, and verify issued documents.</div>
+          </div>
+          <div class="quick-card-footer">
+            <span class="text-muted small">Online Requests</span>
+            <span class="quick-card-action-text">Apply <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      
+
+      <!-- Tile 6: Grievance & Student Requests -->
+      
+        <a href="/student/grievances" class="quick-service-card">
+          <div>
+            <div class="quick-card-icon-wrap card-icon-teal">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <div class="quick-card-title">Request & Grievance</div>
+            <div class="quick-card-desc">Submit formal academic requests or grievances with real-time ticket tracking.</div>
+          </div>
+          <div class="quick-card-footer">
+            <span class="text-muted small">Support Helpdesk</span>
+            <span class="quick-card-action-text">Helpdesk <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      
+
+      <!-- Tile 7: Backlog / Summer Semester (Conditional) -->
+      
+        <a href="/student/summerSem/64cb7b9313bde45627cce6ba" class="quick-service-card">
+          <div>
+            <div class="quick-card-icon-wrap card-icon-crimson">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="quick-card-title">Backlog / Summer Exam</div>
+            <div class="quick-card-desc">Register for failed/backlog courses of previous semesters.</div>
+          </div>
+          <div class="quick-card-footer">
+            <span class="badge badge-warning px-2 py-1" style="font-size: 9px;">Re-appear</span>
+            <span class="quick-card-action-text">Register <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      
+
+      <!-- Tile 8: Minor Details (Conditional: B.Tech 8th Sem) -->
+      
+
+    </div>
+
+    <!-- ==================== 3. EDIT PROFILE FORM (ACCORDION / TOGGLE) ==================== -->
+    
+      <div id="profileEditSection" class="hidden mb-4">
+        <div class="card border-0 shadow-sm" style="border-radius: var(--card-radius); border: 2px solid var(--dtu-crimson) !important;">
+          <div class="card-header bg-white py-3 px-4 d-flex justify-content-between align-items-center">
+            <h5 class="mb-0 font-weight-bold text-dark">
+              <i class="fas fa-user-edit text-danger mr-2"></i>Update Profile Information
+            </h5>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="toggleEditProfile()">
+              <i class="fas fa-times mr-1"></i>Cancel
+            </button>
+          </div>
+          <div class="card-body p-4">
+            <form id="profileForm" action="/student/edit/64cb7b9313bde45627cce6ba" method="POST">
+              <div class="row">
+                
+                <div class="col-md-4 form-group">
+                  <label for="category">Category</label>
+                  <select name="category" id="category" class="form-control" required>
+                    <option value="GEN" >General</option>
+                    <option value="OBC" >OBC</option>
+                    <option value="EWS" >EWS</option>
+                    <option value="SC"  >SC</option>
+                    <option value="ST"  selected>ST</option>
+                    <option value="FN"  >Foreign National</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="sex">Gender</label>
+                  <select name="sex" id="sex" class="form-control" required>
+                    <option value="M" selected>Male</option>
+                    <option value="F" >Female</option>
+                    <option value="T" >Transgender</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country" class="form-control" value="INDIAN" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="state">State</label>
+                  <input type="text" name="state" id="state" class="form-control" value="Delhi" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="f_income">Family Annual Income</label>
+                  <select name="f_income" id="f_income" class="form-control" required>
+                    <option value="<2.5 Lakhs" >&lt; 2.5 Lakhs</option>
+                    <option value="2.5 to 5 Lakhs" >2.5 to 5 Lakhs</option>
+                    <option value="5 to 8 Lakhs" >5 to 8 Lakhs</option>
+                    <option value="8 to 10 Lakhs" >8 to 10 Lakhs</option>
+                    <option value=">10 Lakhs" >&gt; 10 Lakhs</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="aadhar">Aadhar Number</label>
+                  <input type="text" id="aadhar" name="aadhar" value="" class="form-control" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="abcid">ABC ID (Academic Bank of Credits)</label>
+                  <input type="text" id="abcid" name="abcid" value="886-904-788-636" class="form-control" placeholder="12-digit ABC ID" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="pob">Place of Birth</label>
+                  <input type="text" id="pob" name="pob" value="" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="religon">Religion</label>
+                  <input type="text" id="religon" name="religon" value="Hindu" class="form-control" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="phone">Student Mobile No.</label>
+                  <input type="text" id="phone" name="phone" value="7210476048" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="email">Student Email</label>
+                  <input type="email" id="email" name="email" value="rk58743k@gmail.com" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="fathername">Father's Name</label>
+                  <input type="text" id="fathername" name="fathername" value="PRADIP KUMAR" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="f_phone">Father's Mobile No.</label>
+                  <input type="text" id="f_phone" name="f_phone" value="NULL" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="mothername">Mother's Name</label>
+                  <input type="text" id="mothername" name="mothername" value="MINTA DEVI" class="form-control">
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <label for="f_mail">Father's Email</label>
+                  <input type="email" id="f_mail" name="f_mail" value="" class="form-control">
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="address">Correspondence Address</label>
+                  <textarea id="address" name="address" rows="2" class="form-control">DELHI</textarea>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="pmnt_address">Permanent Address</label>
+                  <textarea id="pmnt_address" name="pmnt_address" rows="2" class="form-control"></textarea>
+                </div>
+
+              </div>
+
+              <div class="text-right mt-3">
+                <button type="button" class="btn btn-secondary mr-2" id="cancelBtn" onclick="toggleEditProfile()">Cancel</button>
+                <button type="submit" class="btn btn-danger font-weight-bold px-4">Save Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- ==================== 4. TABBED PROFILE & ACADEMIC INFORMATION HUB ==================== -->
+    <div class="dashboard-tabs-card">
+      <ul class="nav custom-pill-nav" id="studentProfileTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="tab-personal-link" data-toggle="pill" href="#tab-personal" role="tab" aria-selected="true">
+            <i class="fas fa-user"></i>Personal Details
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="tab-academic-link" data-toggle="pill" href="#tab-academic" role="tab" aria-selected="false">
+            <i class="fas fa-graduation-cap"></i>Academic Details
+          </a>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" id="tab-courses-link" data-toggle="pill" href="#tab-courses" role="tab" aria-selected="false">
+              <i class="fas fa-book-open"></i>Enrolled Courses
+              
+                <span class="badge badge-light ml-1" style="font-size: 10px;">7</span>
+              
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="tab-fees-link" data-toggle="pill" href="#tab-fees" role="tab" aria-selected="false">
+              <i class="fas fa-receipt"></i>Fees & Receipts
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="tab-notices-link" data-toggle="pill" href="#tab-notices" role="tab" aria-selected="false">
+              <i class="fas fa-bell"></i>Notices & Circulars
+            </a>
+          </li>
+        
+      </ul>
+
+      <div class="tab-content tab-body-wrap" id="studentProfileTabsContent">
+        
+        <!-- Tab 1: Personal Details -->
+        <div class="tab-pane fade show active" id="tab-personal" role="tabpanel">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="font-weight-bold text-dark mb-0">Personal & Family Details</h5>
+            
+              <button class="btn btn-sm btn-outline-danger font-weight-bold" onclick="toggleEditProfile()">
+                <i class="fas fa-pen mr-1"></i>Edit Information
+              </button>
+            
+          </div>
+
+          <div class="details-grid">
+            <div class="detail-item-box">
+              <div class="detail-label">Full Name</div>
+              <div class="detail-value">RAHUL   KUMAR</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Roll Number</div>
+              <div class="detail-value text-primary font-weight-bold">23/BMBA/18</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Gender</div>
+              <div class="detail-value">Male</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Social Category</div>
+              <div class="detail-value"><span class="badge badge-secondary px-2 py-1">ST</span></div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Aadhar Number</div>
+              <div class="detail-value">N/A</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">ABC ID (Academic Bank of Credits)</div>
+              <div class="detail-value text-success font-weight-bold">886-904-788-636</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Nationality</div>
+              <div class="detail-value">INDIAN</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">State of Residence</div>
+              <div class="detail-value">N/A</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Family Annual Income</div>
+              <div class="detail-value">N/A</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Student Personal Email</div>
+              <div class="detail-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="15677e202d2221267e557278747c793b767a78">[email&#160;protected]</a></div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Official DTU Email</div>
+              <div class="detail-value text-primary">N/A</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Contact Mobile</div>
+              <div class="detail-value">7210476048</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Father's Name</div>
+              <div class="detail-value">PRADIP KUMAR</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Father's Mobile No.</div>
+              <div class="detail-value">NULL</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Mother's Name</div>
+              <div class="detail-value">MINTA DEVI</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Permanent Address</div>
+              <div class="detail-value">DELHI</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Account Security</div>
+              <div class="detail-value d-flex align-items-center justify-content-between">
+                <span>••••••••</span>
+                <button class="btn btn-sm btn-outline-danger py-0 px-2 font-weight-bold" type="button" data-toggle="modal" data-target="#changePasswordModal">
+                  Change Password
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Academic Profile -->
+        <div class="tab-pane fade" id="tab-academic" role="tabpanel">
+          <h5 class="font-weight-bold text-dark mb-3">Academic & Enrollment Profile</h5>
+          <div class="details-grid">
+            <div class="detail-item-box">
+              <div class="detail-label">Academic Programme</div>
+              <div class="detail-value text-primary font-weight-bold">BMBA</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Specialization / Discipline</div>
+              <div class="detail-value">Master of Business Administration(Business Analytics) (BMBA)</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Current Academic Semester</div>
+              <div class="detail-value font-weight-bold">Semester 4</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Admission / Batch Year</div>
+              <div class="detail-value">2023</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Curriculum Scheme Year</div>
+              <div class="detail-value">2023</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Assigned Class Section</div>
+              <div class="detail-value"><span class="badge badge-info px-2 py-1">0</span></div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">University Registration ID</div>
+              <div class="detail-value">2K23/BMBA/18</div>
+            </div>
+            <div class="detail-item-box">
+              <div class="detail-label">Academic Status</div>
+              <div class="detail-value text-success font-weight-bold"><i class="fas fa-check-circle mr-1"></i>Active / In-Term</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Enrolled Courses -->
+        
+        <div class="tab-pane fade" id="tab-courses" role="tabpanel">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="font-weight-bold text-dark mb-0">Currently Enrolled Subjects</h5>
+            
+          </div>
+
+          
+            <div class="course-card-grid">
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MB401a</div>
+                  <div class="course-title">Project Dissertation</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>Compulsory</span>
+                    
+                      <span class="badge badge-light border">6 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MB402</div>
+                  <div class="course-title">Enterprise Performance Management</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>Compulsory</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MB403</div>
+                  <div class="course-title">Entrepreneurship Development</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>Compulsory</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MB404</div>
+                  <div class="course-title">Project Management</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>Compulsory</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MBG008</div>
+                  <div class="course-title">Managing Financial Institutions &amp; Markets </div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>BMBA-IV</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MBD006</div>
+                  <div class="course-title">HR Analytics</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>BMBA-IV</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+                <div class="course-item-card">
+                  <div class="course-code-badge">MBD012</div>
+                  <div class="course-title">Digital Marketing Analytics</div>
+                  <div class="course-meta">
+                    <span><i class="fas fa-tag mr-1 text-muted"></i>BMBA-IV</span>
+                    
+                      <span class="badge badge-light border">4 Credits</span>
+                    
+                  </div>
+                </div>
+              
+            </div>
+          
+        </div>
+        
+
+        <!-- Tab 4: Fees & Receipts -->
+        
+        <div class="tab-pane fade" id="tab-fees" role="tabpanel">
+          <h5 class="font-weight-bold text-dark mb-3">Payment Summary & Receipts</h5>
+
+          <div class="row mb-4">
+            <div class="col-md-4 mb-2">
+              <div class="card border-0 bg-light p-3 rounded">
+                <div class="text-muted small font-weight-bold text-uppercase">Total Fee Paid</div>
+                <div class="h4 font-weight-bold text-success mb-0">&#8377;0</div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="card border-0 bg-light p-3 rounded">
+                <div class="text-muted small font-weight-bold text-uppercase">Pending Fee Dues</div>
+                <div class="h4 font-weight-bold text-secondary mb-0">
+                  &#8377;0
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <div class="card border-0 bg-light p-3 rounded">
+                <div class="text-muted small font-weight-bold text-uppercase">Backlog / Registration Fee</div>
+                <div class="h4 font-weight-bold text-dark mb-0">&#8377;Incomplete</div>
+              </div>
+            </div>
+          </div>
+
+          
+            <div class="text-center py-4 bg-light rounded text-muted">
+              <i class="fas fa-receipt fa-2x mb-2 d-block text-secondary"></i>
+              <small>No online payment transactions recorded for this account.</small>
+            </div>
+          
+        </div>
+        
+
+        <!-- Tab 5: Notices & Circulars -->
+        
+        <div class="tab-pane fade" id="tab-notices" role="tabpanel">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="font-weight-bold text-dark mb-0">Recent Campus Notices</h5>
+            <a href="/student/notices" class="btn btn-sm btn-outline-danger font-weight-bold">
+              View All Notices &rarr;
+            </a>
+          </div>
+
+          
+            
+              <div class="notice-item-compact border-danger">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="/student/notices" class="font-weight-bold text-dark" style="font-size: 0.95rem;">
+                    Tentative Datesheet of End Term Examination, Nov/Dec-2026
+                  </a>
+                  
+                    <span class="badge badge-danger ml-2 px-2 py-1">URGENT</span>
+                  
+                </div>
+                <div class="small text-muted my-1" style="line-height: 1.4;">
+                  Dear Student,
+
+The Tentative Datesheet of End Term Examination, Nov/Dec-2026 is released and uploaded on DTU Examinati...
+                </div>
+                <div class="d-flex justify-content-between align-items-center small text-secondary mt-2">
+                  <span>
+                    <i class="far fa-clock mr-1"></i>6 Nov 2026
+                    &bull; Examination Department
+                  </span>
+                  
+                    <a href="/student/notices/download/6aedc16d2636249a0f802a2b" class="btn btn-sm btn-light border py-0 px-2 font-weight-bold text-danger">
+                      <i class="fas fa-paperclip mr-1"></i>Attachment
+                    </a>
+                  
+                </div>
+              </div>
+            
+          
+        </div>
+        
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== 5. CHANGE PASSWORD MODAL (EMAIL OTP) ==================== -->
+  
+  <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content" style="border-radius: 16px; border: none; box-shadow: 0 14px 40px rgba(0,0,0,0.25);">
+        <div class="modal-header" style="background-color: var(--dtu-crimson); color: #fff; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+          <h5 class="modal-title font-weight-bold" id="changePasswordModalLabel">
+            <i class="fas fa-lock mr-2"></i>Change Password (Email OTP)
+          </h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" onclick="$('#changePasswordModal').modal('hide');">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 mb-3 bg-light rounded border text-muted small" style="line-height: 1.4;">
+            <i class="fas fa-envelope-open-text text-danger mr-1"></i> Verification OTP will be sent to your registered address:
+            <strong class="text-dark">rk****<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fbce4cfe8e2eee6e3a1ece0e2">[email&#160;protected]</a></strong>
+          </div>
+
+          <div class="d-flex align-items-center mb-3">
+            <button type="button" class="btn btn-outline-danger btn-sm font-weight-bold" id="cpSendOtpBtn" onclick="sendChangePassOTP()">
+              Send Verification OTP
+            </button>
+            <span id="cpCooldownText" class="text-muted ml-3 small" style="display: none;"></span>
+          </div>
+
+          <div id="cpAlert" class="alert d-none py-2 px-3 mb-3 small font-weight-normal"></div>
+
+          <form id="changePassForm" onsubmit="return false;">
+            <div class="form-group mb-3">
+              <label for="cpOtp" class="font-weight-bold small mb-1">6-Digit OTP:</label>
+              <input type="text" id="cpOtp" class="form-control" maxlength="6" placeholder="Enter 6-digit OTP"
+                style="letter-spacing: 4px; font-weight: bold; font-family: monospace;" required>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="cpNewPass" class="font-weight-bold small mb-1">New Password:</label>
+              <div style="position: relative;">
+                <input type="password" id="cpNewPass" class="form-control" placeholder="Min. 6 characters" minlength="6" required>
+                <button type="button" class="btn btn-sm btn-link text-muted"
+                  style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); text-decoration: none;"
+                  onclick="toggleFieldPass('cpNewPass', this)">Show</button>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="cpConfirmPass" class="font-weight-bold small mb-1">Confirm New Password:</label>
+              <div style="position: relative;">
+                <input type="password" id="cpConfirmPass" class="form-control" placeholder="Re-enter new password" minlength="6" required>
+                <button type="button" class="btn btn-sm btn-link text-muted"
+                  style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); text-decoration: none;"
+                  onclick="toggleFieldPass('cpConfirmPass', this)">Show</button>
+              </div>
+              <small id="cpMismatch" class="text-danger d-none">Passwords do not match.</small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer bg-light" style="border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" onclick="$('#changePasswordModal').modal('hide');">Cancel</button>
+          <button type="button" class="btn btn-danger btn-sm font-weight-bold px-3" id="cpSubmitBtn" onclick="submitChangePassFinal()">
+            Verify & Update Password
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 6. COURSE REGISTRATION INSTRUCTIONS MODAL ==================== -->
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content modal-instruction-content">
+        <div class="modal-header" style="background: var(--dtu-crimson); color: #fff; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+          <h5 class="modal-title font-weight-bold">
+            <i class="fas fa-info-circle mr-2"></i>Instructions for Course Registration
+          </h5>
+          <button type="button" class="close text-white" onclick="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4" style="line-height: 1.6; font-size: 0.92rem;">
+          <ul class="pl-3">
+            <li class="mb-2">You are advised to register the failed courses of previous semester before registering courses of current semester. If you have failed courses, 
+              <a href="/student/summerSem/64cb7b9313bde45627cce6ba" class="font-weight-bold text-danger">click here to add them</a>.
+            </li>
+            <li class="mb-2">You are required to register all compulsory and elective courses into your registration portal.</li>
+            <li class="mb-2">Your course registration slip will only be generated after paying the required fee (500 per re-appear course) and submitting details via SBI Collect. Attaching fake or forged fee slips will attract strict disciplinary action and registration cancellation.</li>
+            <li class="mb-2">Payment details for re-registration course fees are available on your dashboard under SBI Collect.</li>
+            <li>For more details, please review the latest circulars on your dashboard notice board.</li>
+          </ul>
+
+          <div class="p-3 bg-light rounded border mt-3 d-flex align-items-center">
+            <input type="checkbox" id="readCheckbox" class="mr-2" style="transform: scale(1.2);" onchange="toggleAgreeButton()">
+            <label for="readCheckbox" class="mb-0 font-weight-bold text-dark cursor-pointer">
+              I have read, understood, and agree to the course registration instructions.
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer bg-light" style="border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+          <button class="btn btn-secondary btn-sm" onclick="closeModal()">Close</button>
+          <button class="btn btn-danger btn-sm font-weight-bold px-3" id="agreeBtn" onclick="redirectToPage()" disabled>
+            I Agree & Proceed
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Toggle Profile Edit Section
+    function toggleEditProfile() {
+      const editSec = document.getElementById('profileEditSection');
+      if (editSec.classList.contains('hidden')) {
+        editSec.classList.remove('hidden');
+        editSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        editSec.classList.add('hidden');
+      }
+    }
+
+    // Toggle Field Password Mask
+    function toggleFieldPass(fieldId, btn) {
+      const f = document.getElementById(fieldId);
+      if (f.type === 'password') {
+        f.type = 'text';
+        btn.textContent = 'Hide';
+      } else {
+        f.type = 'password';
+        btn.textContent = 'Show';
+      }
+    }
+
+    // OTP Cooldown
+    let cpCooldownTimer = null;
+    function startCpCooldown(seconds) {
+      const btn = document.getElementById('cpSendOtpBtn');
+      const txt = document.getElementById('cpCooldownText');
+      btn.disabled = true;
+      btn.style.display = 'none';
+      txt.style.display = 'inline';
+
+      let rem = seconds;
+      txt.textContent = `Resend available in ${rem}s`;
+
+      if (cpCooldownTimer) clearInterval(cpCooldownTimer);
+      cpCooldownTimer = setInterval(function () {
+        rem -= 1;
+        if (rem <= 0) {
+          clearInterval(cpCooldownTimer);
+          txt.style.display = 'none';
+          btn.style.display = 'inline';
+          btn.disabled = false;
+          btn.textContent = 'Resend Verification OTP';
+        } else {
+          txt.textContent = `Resend available in ${rem}s`;
+        }
+      }, 1000);
+    }
+
+    // Send Change Password OTP
+    async function sendChangePassOTP() {
+      const btn = document.getElementById('cpSendOtpBtn');
+      const alertBox = document.getElementById('cpAlert');
+
+      btn.disabled = true;
+      btn.textContent = 'Sending OTP...';
+
+      try {
+        const res = await fetch('/student/send-change-password-otp/64cb7b9313bde45627cce6ba', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+        });
+        const data = await res.json();
+        alertBox.classList.remove('d-none', 'alert-danger', 'alert-success');
+
+        if (res.ok && data.success) {
+          alertBox.classList.add('alert-success');
+          alertBox.textContent = data.message || 'OTP sent successfully to your registered email.';
+          startCpCooldown(60);
+        } else {
+          alertBox.classList.add('alert-danger');
+          alertBox.textContent = data.message || 'Failed to send OTP.';
+          if (data.waitTime) {
+            startCpCooldown(data.waitTime);
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Send Verification OTP';
+          }
+        }
+      } catch (err) {
+        alertBox.classList.remove('d-none', 'alert-success');
+        alertBox.classList.add('alert-danger');
+        alertBox.textContent = 'Network error while sending OTP. Please try again.';
+        btn.disabled = false;
+        btn.textContent = 'Send Verification OTP';
+      }
+    }
+
+    // Submit Password Change Final
+    async function submitChangePassFinal() {
+      const otp = document.getElementById('cpOtp').value.trim();
+      const newPassword = document.getElementById('cpNewPass').value;
+      const confirmPassword = document.getElementById('cpConfirmPass').value;
+      const alertBox = document.getElementById('cpAlert');
+      const mismatch = document.getElementById('cpMismatch');
+      const submitBtn = document.getElementById('cpSubmitBtn');
+
+      mismatch.classList.add('d-none');
+      alertBox.classList.remove('alert-danger', 'alert-success');
+
+      if (!otp) {
+        alertBox.classList.remove('d-none');
+        alertBox.classList.add('alert-danger');
+        alertBox.textContent = 'Please enter the 6-digit OTP received on your email.';
+        return;
+      }
+
+      if (!newPassword || newPassword.length < 6) {
+        alertBox.classList.remove('d-none');
+        alertBox.classList.add('alert-danger');
+        alertBox.textContent = 'New Password must be at least 6 characters long.';
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        mismatch.classList.remove('d-none');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Updating...';
+
+      try {
+        const res = await fetch('/student/change-password/64cb7b9313bde45627cce6ba', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ otp, newPassword, confirmPassword })
+        });
+        const data = await res.json();
+        alertBox.classList.remove('d-none', 'alert-danger', 'alert-success');
+
+        if (res.ok && data.success) {
+          alertBox.classList.add('alert-success');
+          alertBox.textContent = data.message || 'Password changed successfully!';
+          submitBtn.style.display = 'none';
+          setTimeout(function () {
+            window.location.reload();
+          }, 1800);
+        } else {
+          alertBox.classList.add('alert-danger');
+          alertBox.textContent = data.message || 'Failed to update password.';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Verify & Update Password';
+        }
+      } catch (err) {
+        alertBox.classList.remove('d-none', 'alert-success');
+        alertBox.classList.add('alert-danger');
+        alertBox.textContent = 'Network error while updating password. Please try again.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Verify & Update Password';
+      }
+    }
+
+    // Course Registration Modal Logic
+    function openModal() {
+      
+        window.location.href = "/student/courseRegistration/64cb7b9313bde45627cce6ba";
+      
+    }
+
+    function closeModal() {
+      $('#infoModal').modal('hide');
+    }
+
+    function toggleAgreeButton() {
+      const checkbox = document.getElementById('readCheckbox');
+      const agreeButton = document.getElementById('agreeBtn');
+      agreeButton.disabled = !checkbox.checked;
+    }
+
+    function redirectToPage() {
+      window.location.href = "/student/courseRegistration/64cb7b9313bde45627cce6ba";
+    }
+
+    // Hide loader on window load
+    window.addEventListener('load', function () {
+      const loader = document.querySelector('.loader-container');
+      if (loader) loader.classList.add('hidden');
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Check if hash points to change-password
+      if (window.location.hash === '#change-password') {
+        $('#changePasswordModal').modal('show');
+      } else if (window.location.hash === '#enrolled-courses') {
+        $('#tab-courses-link').tab('show');
+      }
+    });
+  </script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5849b596f300aea',t:'MTc5NDMwODk4NQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5849b596f300aea',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+</html>
