@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Senior Devops Engineer",
+    "company": "Asper Ai",
+    "exp": "5-9 Yrs",
+    "loc": "Hybrid - Bengaluru",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-senior-devops-engineer-asper-ai-bengaluru-5-to-9-years-121126010874",
+    "dispatch": {
+      "track": "DevOps_AWS",
+      "score": 1,
+      "resume": "Rahul_Kumar_DevOps_AWS_2026.pdf",
+      "headline": "AWS Certified DevOps Pro (DOP-C02) | EKS, Terraform, ArgoCD, Python, Linux | 30 Days Notice"
+    },
+    "status": "SUCCESS",
+    "job_id": "J465"
+  },
+  {
+    "title": "Cloud Migration Consultant (AWS To Azure)",
+    "company": "Shashwath Solution",
+    "exp": "6-9 Yrs",
+    "loc": "Pune",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-cloud-migration-consultant-aws-to-azure-shashwath-solution-pune-6-to-9-years-111126928234",
+    "dispatch": {
+      "track": "DevOps_AWS",
+      "score": 1,
+      "resume": "Rahul_Kumar_DevOps_AWS_2026.pdf",
+      "headline": "AWS Certified DevOps Pro (DOP-C02) | EKS, Terraform, ArgoCD, Python, Linux | 30 Days Notice"
+    },
+    "status": "SUCCESS",
+    "job_id": "J466"
+  },
+  {
+    "title": "GCP DevOps Engineer",
+    "company": "Hiring for Leading MNC Company",
+    "exp": "5-10 Yrs",
+    "loc": "Hybrid - Hyderabad, Bengaluru, Pune",
+    "sal": "18-33 Lacs PA",
+    "url": "https://www.naukri.com/job-listings-gcp-devops-engineer-sp-staffing-hyderabad-pune-bengaluru-5-to-10-years-121126024238",
+    "dispatch": {
+      "track": "DevOps_AWS",
+      "score": 1,
+      "resume": "Rahul_Kumar_DevOps_AWS_2026.pdf",
+      "headline": "AWS Certified DevOps Pro (DOP-C02) | EKS, Terraform, ArgoCD, Python, Linux | 30 Days Notice"
+    },
+    "status": "SUCCESS",
+    "job_id": "J467"
+  },
+  {
+    "title": "Senior Data Engineer",
+    "company": "SMC Squared",
+    "exp": "5-10 Yrs",
+    "loc": "Hyderabad",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-senior-data-engineer-smedc-services-private-limited-hyderabad-5-to-10-years-121126502762",
+    "dispatch": {
+      "track": "MLOps_Platform",
+      "score": 1,
+      "resume": "Rahul_Kumar_MLOps_Engineer_CV.pdf",
+      "headline": "MLOps & Cloud Platform Engineer | Kubernetes, Kubeflow, MLflow, AWS EKS, Python"
+    },
+    "status": "SUCCESS",
+    "job_id": "J468"
+  },
+  {
+    "title": "Dynatrace Observability Engineer",
+    "company": "A Leading MNC",
+    "exp": "6-11 Yrs",
+    "loc": "Hybrid - Hyderabad, Gurugram, Bengaluru",
+    "sal": "25-35 Lacs PA",
+    "url": "https://www.naukri.com/job-listings-dynatrace-observability-engineer-talastra-hr-consultants-private-limited-hyderabad-gurugram-bengaluru-6-to-11-years-121126030134",
+    "dispatch": {
+      "track": "SRE",
+      "score": 1,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "SUCCESS",
+    "job_id": "J469"
+  },
+  {
+    "title": "Senior Data Engineer",
+    "company": "Straive",
+    "exp": "5-9 Yrs",
+    "loc": "Hybrid - Delhi / NCR, Bengaluru",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-senior-data-engineer-straive-bengaluru-delhi-ncr-5-to-9-years-111126015936",
+    "dispatch": {
+      "track": "MLOps_Platform",
+      "score": 1,
+      "resume": "Rahul_Kumar_MLOps_Engineer_CV.pdf",
+      "headline": "MLOps & Cloud Platform Engineer | Kubernetes, Kubeflow, MLflow, AWS EKS, Python"
+    },
+    "status": "SUCCESS",
+    "job_id": "J470"
+  },
+  {
+    "title": "MLOps Engineer",
+    "company": "Bounteous",
+    "exp": "5-8 Yrs",
+    "loc": "Hybrid - Gurugram, Bengaluru, Chennai",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-mlops-engineer-bounteous-gurugram-chennai-bengaluru-5-to-8-years-121126011221",
+    "dispatch": {
+      "track": "MLOps_Platform",
+      "score": 1,
+      "resume": "Rahul_Kumar_MLOps_Engineer_CV.pdf",
+      "headline": "MLOps & Cloud Platform Engineer | Kubernetes, Kubeflow, MLflow, AWS EKS, Python"
+    },
+    "status": "SUCCESS",
+    "job_id": "J471"
+  },
+  {
+    "title": "Data Engineer/ senior Data Engineer",
+    "company": "Celebal Technologies",
+    "exp": "4-9 Yrs",
+    "loc": "Bengaluru, Pune, Noida",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-data-engineer-senior-data-engineer-celebal-technologies-noida-pune-bengaluru-4-to-9-years-090926014212",
+    "dispatch": {
+      "track": "MLOps_Platform",
+      "score": 1,
+      "resume": "Rahul_Kumar_MLOps_Engineer_CV.pdf",
+      "headline": "MLOps & Cloud Platform Engineer | Kubernetes, Kubeflow, MLflow, AWS EKS, Python"
+    },
+    "status": "SUCCESS",
+    "job_id": "J472"
+  },
+  {
+    "title": "Site Reliability Engineer II (Platform Engineer)",
+    "company": "Sixt Research And Development",
+    "exp": "4-7 Yrs",
+    "loc": "Bengaluru",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-site-reliability-engineer-ii-platform-engineer-sixt-bengaluru-4-to-7-years-121126502891",
+    "dispatch": {
+      "track": "SRE",
+      "score": 2,
+      "resume": "Rahul_Kumar_Site_Reliability_Engineer_CV.pdf",
+      "headline": "Site Reliability Engineer (SRE) | AWS Certified DevOps Pro | Kubernetes, Linux, Prometheus, Grafana"
+    },
+    "status": "SUCCESS",
+    "job_id": "J473"
+  },
+  {
+    "title": "Data Engineer",
+    "company": "Opsera",
+    "exp": "5-7 Yrs",
+    "loc": "Bengaluru, Chennai",
+    "sal": "Not disclosed",
+    "url": "https://www.naukri.com/job-listings-data-engineer-opsera-inc-chennai-bengaluru-5-to-7-years-121126911826",
+    "dispatch": {
+      "track": "MLOps_Platform",
+      "score": 1,
+      "resume": "Rahul_Kumar_MLOps_Engineer_CV.pdf",
+      "headline": "MLOps & Cloud Platform Engineer | Kubernetes, Kubeflow, MLflow, AWS EKS, Python"
+    },
+    "status": "SUCCESS",
+    "job_id": "J474"
+  }
+]
