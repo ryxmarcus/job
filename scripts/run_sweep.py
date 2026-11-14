@@ -6,7 +6,7 @@ import csv
 import re
 import socket
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -28,7 +28,7 @@ except Exception as e:
     voice_service = None
 
 TODAY_STR = datetime.now().strftime("%Y-%m-%d")
-FOLLOWUP_STR = (datetime.now() + pd.Timedelta(days=14)).strftime("%Y-%m-%d") if 'pd' in locals() else "2026-11-27"
+FOLLOWUP_STR = (datetime.now() + timedelta(days=14)).strftime("%Y-%m-%d")
 
 # Filter configuration to ensure 100% High Match on Naukri
 EXCLUDE_KEYWORDS = [
